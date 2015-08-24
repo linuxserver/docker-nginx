@@ -2,21 +2,22 @@
 
 The [LinuxServer.io](http://linuxserver.io) team brings you another quality container release featuring auto-update on startup, easy user mapping and community support. Be sure to checkout our [forums](http://forum.linuxserver.io) or for real-time support our [IRC](http://www.linuxserver.io/index.php/irc/) on freenode at `#linuxserver.io`.
 
-# linuxserver/<container-name>
+# linuxserver/nginxweb
 
-<Provide a short, concise description of the application. No more than two SHORT paragraphs. Link to sources where possible and include an image illustrating your point if necessary. Point users to the original applications website, as that's the best place to get support - not here.>
+This Container is a simple nginx webserver configured with default and ssl, and all relevant config files moved out the user via /config for ultimate control. it contains some of the basic php-packages. and is built on our internal baseimage-nginx, which there is much work at.  
 
 ## Usage
 
 ```
-docker create --name=<container-name> -v /etc/localtime:/etc/localtime:ro -v <path to data>:/config -e PGID=<gid> -e PUID=<uid>  -p 1234:1234 linuxserver/<container-name>
+docker create --name=nginxweb -v /etc/localtime:/etc/localtime:ro -v <path to data>:/config -e PGID=<gid> -e PUID=<uid>  -p 80:80 -p 443:443 linuxserver/nginxweb
 ```
 
 **Parameters**
 
-* `-p 4242` - the port(s)
+* `-p 80` - The web-services.
+* `-p 443` - The SSL-Based Webservice
 * `-v /etc/localhost` for timesync - *optional*
-* `-v /config` -
+* `-v /config` - Contains you www content and all relevant configuration files.
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
 
@@ -30,7 +31,9 @@ Part of what makes our containers work so well is by allowing you to specify you
 
 ## Setting up the application 
 
-<Insert a basic user guide here to get a n00b up and running with the software inside the container.> DELETE ME
+Add your web files to /config/www for hosting. 
+
+*Protip: This container is best combined with a sql server, e.g. [mariadb](https://hub.docker.com/r/linuxserver/mariadb/)* 
 
 
 ## Updates
@@ -39,7 +42,6 @@ Part of what makes our containers work so well is by allowing you to specify you
 * To monitor the logs of the container in realtime `docker logs -f <container-name>`.
 
 
-
 ## Versions
 
-+ **dd.MM.yyyy:** This is the standard Version type now. 
++ **28.08.2015:** The intial Release. 
