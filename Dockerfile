@@ -8,7 +8,6 @@ apt-get clean && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
 
 #Adding Custom files
-RUN mkdir -p /defaults 
 
 # Volumes and Ports
 VOLUME /config
