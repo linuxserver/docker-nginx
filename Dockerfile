@@ -1,6 +1,6 @@
 FROM linuxserver/baseimage.nginx
 MAINTAINER Stian Larsen <lonix@linuxserver.io>
-ENV APTLIST="php5-mysql php5-mcrypt php5-curl php5-gd php5-cgi php5-pgsql php5-memcached php5-sqlite memcached"
+ENV APTLIST="php5-mysqlnd php5-mcrypt php5-curl php5-gd php5-cgi php5-pgsql php5-memcached php5-sqlite memcached"
 
 #Applying stuff from apt
 RUN apt-get update -q && \
