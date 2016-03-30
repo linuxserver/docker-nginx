@@ -16,7 +16,7 @@ docker create --name=nginx -v /etc/localtime:/etc/localtime:ro -v <path to data>
 
 * `-p 80` - The web-services.
 * `-p 443` - The SSL-Based Webservice
-* `-v /etc/localhost` for timesync - *optional*
+* `-v /etc/localtime` for timesync - *optional*
 * `-v /config` - Contains you www content and all relevant configuration files.
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
