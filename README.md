@@ -9,7 +9,7 @@ This Container is a simple nginx webserver configured with default and ssl, and 
 ## Usage
 
 ```
-docker create --name=nginx -v /etc/localtime:/etc/localtime:ro -v <path to data>:/config -e PGID=<gid> -e PUID=<uid>  -p 80:80 -p 443:443 linuxserver/nginxweb
+docker create --name=nginx -v /etc/localtime:/etc/localtime:ro -v <path to data>:/config -e PGID=<gid> -e PUID=<uid>  -p 80:80 -p 443:443 linuxserver/nginx
 ```
 
 **Parameters**
