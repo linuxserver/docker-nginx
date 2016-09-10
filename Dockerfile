@@ -1,5 +1,9 @@
 FROM linuxserver/baseimage.nginx
-MAINTAINER Stian Larsen <lonix@linuxserver.io>
+MAINTAINER Stian Larsen, sparklyballs
+
+# copy sources.list
+COPY sources.list /etc/apt/
+
 ENV APTLIST="php5-mysqlnd php5-mcrypt php5-curl php5-gd php5-cgi php5-pgsql php5-memcached php5-sqlite memcached"
 
 #Applying stuff from apt
