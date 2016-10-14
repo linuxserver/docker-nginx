@@ -11,7 +11,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # linuxserver/nginx
-[![](https://images.microbadger.com/badges/image/linuxserver/nginx.svg)](http://microbadger.com/images/linuxserver/nginx "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/nginx.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/nginx.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-nginx)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-nginx/)
+[![](https://images.microbadger.com/badges/version/linuxserver/nginx.svg)](https://microbadger.com/images/linuxserver/nginx "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/nginx.svg)](http://microbadger.com/images/linuxserver/nginx "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/nginx.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/nginx.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-nginx)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-nginx/)
 [hub]: https://hub.docker.com/r/linuxserver/nginx/
 
 This Container is a simple nginx webserver configured with default and ssl, and all relevant config files moved out the user via /config for ultimate control. it contains some of the basic php-packages. and is built on our internal nginx baseimage.
@@ -60,12 +60,21 @@ Add your web files to /config/www for hosting.
 *Protip: This container is best combined with a sql server, e.g. [mariadb](https://hub.docker.com/r/linuxserver/mariadb/)* 
 
 
-## Updates
+## Info
 
-* Upgrade to the latest version simply `docker restart nginx`.
 * To monitor the logs of the container in realtime `docker logs -f nginx`.
+
+
+* container version number 
+
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' nginx`
+
+* image version number
+
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/nginx`
 
 ## Versions
 
++ **14-10-16:** Add version layer information.
 + **10.09.16:** Add badges to README. 
 + **05.12.15:** Intial Release.
