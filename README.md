@@ -81,6 +81,6 @@ Add your web files to /config/www for hosting.
 
 ## Versions
 
-+ **14-10-16:** Add version layer information.
++ **14.10.16:** Add version layer information.
 + **10.09.16:** Add badges to README. 
 + **05.12.15:** Intial Release.
