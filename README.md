@@ -41,7 +41,7 @@ http://192.168.x.x:8080 would show you what's running INSIDE the container on po
 
 * `-p 80` - The web-services.
 * `-p 443` - The SSL-Based Webservice
-* `-v /config` - Contains you www content and all relevant configuration files.
+* `-v /config` - Contains your www content and all relevant configuration files.
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
 * `-e TZ` - timezone ie. `America/New_York`
