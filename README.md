@@ -81,6 +81,7 @@ Add your web files to /config/www for hosting.
 
 ## Versions
 
++ **18.04.17:** Add php7-sockets
 + **27.02.17:** Rebase to alpine 3.5, update to nginx 1.10.2 and php7
 + **14.10.16:** Add version layer information.
 + **10.09.16:** Add badges to README. 
