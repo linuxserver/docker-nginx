@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.nginx:3.5
+FROM lsiobase/alpine.nginx:3.6
 MAINTAINER Stian Larsen, sparklyballs, aptalca
 
 # set version label
@@ -26,12 +26,7 @@ RUN \
 	nginx-mod-mail \
 	nginx-mod-rtmp \
 	nginx-mod-stream \
-	nginx-vim && \
- apk add --no-cache \
-	--repository http://nl.alpinelinux.org/alpine/edge/main \
-	libwebp && \
- apk add --no-cache \
-	--repository http://nl.alpinelinux.org/alpine/edge/community \
+	nginx-vim \
 	php7-ctype \
 	php7-curl \
 	php7-dom \
