@@ -19,13 +19,17 @@ RUN \
 	nginx-mod-http-headers-more \
 	nginx-mod-http-image-filter \
 	nginx-mod-http-lua \
+	nginx-mod-http-lua-upstream \
 	nginx-mod-http-nchan \
 	nginx-mod-http-perl \
+	nginx-mod-http-redis2 \
+	nginx-mod-http-set-misc \
 	nginx-mod-http-upload-progress \
 	nginx-mod-http-xslt-filter \
 	nginx-mod-mail \
 	nginx-mod-rtmp \
 	nginx-mod-stream \
+	nginx-mod-stream-geoip \
 	nginx-vim \
 	php7-bz2 \
 	php7-ctype \
@@ -39,4 +43,5 @@ RUN \
 	php7-pdo_mysql \
 	php7-pdo_sqlite \
 	php7-sockets \
-	php7-xml
+	php7-xml \
+	php7-zip

@@ -81,6 +81,7 @@ Add your web files to /config/www for hosting.
 
 ## Versions
 
++ **22.06.17:** Add various nginx modules and enable all modules in the default nginx.conf
 + **05.06.17:** Add php7-bz2
 + **25.05.17:** Rebase to alpine 3.6.
 + **18.04.17:** Add php7-sockets
