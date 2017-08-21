@@ -13,6 +13,7 @@ ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
 RUN \
  apk add --no-cache \
 	curl \
+	memcached \
 	nginx-mod-http-echo \
 	nginx-mod-http-fancyindex \
 	nginx-mod-http-geoip \
@@ -38,6 +39,7 @@ RUN \
 	php7-gd \
 	php7-iconv \
 	php7-mcrypt \
+	php7-memcached \
 	php7-mysqli \
 	php7-mysqlnd \
 	php7-pdo_mysql \
