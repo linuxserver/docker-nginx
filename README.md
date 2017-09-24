@@ -81,6 +81,7 @@ Add your web files to /config/www for hosting.
 
 ## Versions
 
++ **24.09.17:** Add memcached service
 + **14.07.17:** Enable modules dynamically in nginx.conf
 + **22.06.17:** Add various nginx modules and enable all modules in the default nginx.conf
 + **05.06.17:** Add php7-bz2
