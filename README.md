@@ -81,6 +81,7 @@ Add your web files to /config/www for hosting.
 
 ## Versions
 
++ **30.09.17:** Add lua5.1-cjson and lua5.1-resty-http packages for google auth support, copy additional root files into image
 + **24.09.17:** Add memcached service
 + **31.08.17:** Add php7-phar
 + **14.07.17:** Enable modules dynamically in nginx.conf

@@ -13,6 +13,8 @@ ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
 RUN \
  apk add --no-cache \
 	curl \
+	lua5.1-cjson \
+	lua5.1-resty-http \
 	memcached \
 	nginx-mod-http-echo \
 	nginx-mod-http-fancyindex \
@@ -49,3 +51,6 @@ RUN \
 	php7-tokenizer \
 	php7-xml \
 	php7-zip
+
+# add local files
+COPY root/ /
