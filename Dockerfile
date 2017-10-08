@@ -49,3 +49,6 @@ RUN \
 	php7-tokenizer \
 	php7-xml \
 	php7-zip
+
+# add local files
+COPY root/ /
