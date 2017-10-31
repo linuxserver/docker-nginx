@@ -36,6 +36,7 @@ RUN \
 	php7-ctype \
 	php7-curl \
 	php7-dom \
+	php7-exif \
 	php7-gd \
 	php7-iconv \
 	php7-mcrypt \
@@ -48,6 +49,7 @@ RUN \
 	php7-sockets \
 	php7-tokenizer \
 	php7-xml \
+	php7-xmlreader \
 	php7-zip
 
 # add local files
