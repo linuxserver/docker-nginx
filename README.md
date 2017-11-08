@@ -81,6 +81,7 @@ Add your web files to /config/www for hosting.
 
 ## Versions
 
++ **08.11.2017:** Add php7 soap module
 + **31.10.17:** Add php7 exif and xmlreader modules
 + **30.09.17:** Copy additional root files into image
 + **24.09.17:** Add memcached service
