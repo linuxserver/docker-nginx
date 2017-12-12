@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.nginx:3.6
+FROM lsiobase/alpine.nginx:3.7
 MAINTAINER Stian Larsen, sparklyballs, aptalca
 
 # set version label
