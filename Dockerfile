@@ -51,8 +51,7 @@ RUN \
 	php7-tokenizer \
 	php7-xml \
 	php7-xmlreader \
-	php7-zip \
-	py2-future
+	php7-zip
 
 # add local files
 COPY root/ /
