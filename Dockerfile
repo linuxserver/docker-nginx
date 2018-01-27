@@ -51,7 +51,9 @@ RUN \
 	php7-tokenizer \
 	php7-xml \
 	php7-xmlreader \
-	php7-zip
+	php7-zip \
+	lua5.1-resty-http \
+	lua5.1-cjson
 
 # add local files
 COPY root/ /
