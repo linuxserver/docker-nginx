@@ -32,6 +32,7 @@ RUN \
 	nginx-mod-stream \
 	nginx-mod-stream-geoip \
 	nginx-vim \
+	php7-apcu \
 	php7-bz2 \
 	php7-ctype \
 	php7-curl \
@@ -44,10 +45,13 @@ RUN \
 	php7-mysqli \
 	php7-mysqlnd \
 	php7-pdo_mysql \
+	php7-pdo_pgsql \
 	php7-pdo_sqlite \
+	php7-pgsql \
 	php7-phar \
 	php7-soap \
 	php7-sockets \
+	php7-tidy \
 	php7-tokenizer \
 	php7-xml \
 	php7-xmlreader \
