@@ -14,6 +14,7 @@ RUN \
  apk add --no-cache \
 	curl \
 	memcached \
+	nginx-mod-http-cache-purge \
 	nginx-mod-http-echo \
 	nginx-mod-http-fancyindex \
 	nginx-mod-http-geoip \
