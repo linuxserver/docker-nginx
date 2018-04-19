@@ -81,6 +81,7 @@ Add your web files to /config/www for hosting.
 
 ## Versions
 
++ **19.04.18:** Bind memcached to localhost only, add php7-sqlite3
 + **05.01.18:** Rebase to alpine 3.7
 + **08.11.17:** Add php7 soap module
 + **31.10.17:** Add php7 exif and xmlreader modules
