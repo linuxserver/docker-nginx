@@ -52,8 +52,6 @@ RUN \
 	php7-sockets \
 	php7-sqlite3 \
 	php7-tokenizer \
-	php7-xml \
-	php7-xmlreader \
 	php7-zip
 
 # add local files
