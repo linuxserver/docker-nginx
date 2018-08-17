@@ -81,6 +81,7 @@ Add your web files to /config/www for hosting.
 
 ## Versions
 
++ **17.08.18:** Rebase to alpine 3.8, inherit nginx.conf from nginx baseimage
 + **11.05.18:** Add php pgsql support
 + **19.04.18:** Bind memcached to localhost only, add php7-sqlite3
 + **05.01.18:** Rebase to alpine 3.7
