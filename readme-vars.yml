@@ -1,0 +1,61 @@
+---
+
+# project information
+project_name: Nginx
+project_url: "https://nginx.org/"
+project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nginx-banner.png"
+project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a simple webserver with php support. The config files reside in `/config` for easy user customization."
+project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+
+# supported architectures
+available_architectures:
+  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
+  - { arch: "{{ arch_armhf }}", tag: "arm32v6-latest"}
+
+# container parameters
+common_param_env_vars_enabled: true
+param_container_name: "{{ project_name }}"
+param_usage_include_vols: true
+param_volumes:
+  - { vol_path: "/config", vol_host_path: "</path/to/appdata/config>", desc: "Contains your www content and all relevant configuration files." }
+param_usage_include_ports: true
+param_ports:
+  - { external_port: "80", internal_port: "80", port_desc: "http" }
+  - { external_port: "443", internal_port: "443", port_desc: "https" }
+param_usage_include_env: true
+param_env_vars:
+  - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London"}
+
+# optional parameters
+optional_block_1: false
+optional_block_1_items:""
+
+# application setup block
+app_setup_block_enabled: true
+app_setup_block: |
+  - Add your web files to `/config/www` for hosting.
+  - Modify the nginx, php and site config files under `/config` as needed
+  - *Protip: This container is best combined with a sql server, e.g. [mariadb](https://hub.docker.com/r/linuxserver/mariadb/)*
+
+# changelog
+changelogs:
+  - { date: "28.09.18:", desc: "Multi-arch image." }
+  - { date: "17.08.18:", desc: "Rebase to alpine 3.8, inherit nginx.conf from nginx baseimage." }
+  - { date: "11.05.18:", desc: "Add php pgsql support." }
+  - { date: "19.04.18:", desc: "Bind memcached to localhost only, add php7-sqlite3." }
+  - { date: "05.01.18:", desc: "Rebase to alpine 3.7." }
+  - { date: "08.11.17:", desc: "Add php7 soap module." }
+  - { date: "31.10.17:", desc: "Add php7 exif and xmlreader modules." }
+  - { date: "30.09.17:", desc: "Copy additional root files into image." }
+  - { date: "24.09.17:", desc: "Add memcached service." }
+  - { date: "31.08.17:", desc: "Add php7-phar." }
+  - { date: "14.07.17:", desc: "Enable modules dynamically in nginx.conf." }
+  - { date: "22.06.17:", desc: "Add various nginx modules and enable all modules in the default nginx.conf." }
+  - { date: "05.06.17:", desc: "Add php7-bz2." }
+  - { date: "25.05.17:", desc: "Rebase to alpine 3.6." }
+  - { date: "18.04.17:", desc: "Add php7-sockets." }
+  - { date: "27.02.17:", desc: "Rebase to alpine 3.5, update to nginx 1.10.2 and php7." }
+  - { date: "14.10.16:", desc: "Add version layer information." }
+  - { date: "10.09.16:", desc: "Add badges to README." }
+  - { date: "05.12.15:", desc: "Intial Release." }
