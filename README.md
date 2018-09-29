@@ -1,101 +1,152 @@
-[linuxserverurl]: https://linuxserver.io
-[forumurl]: https://forum.linuxserver.io
-[ircurl]: https://www.linuxserver.io/irc/
-[podcasturl]: https://www.linuxserver.io/podcast/
-[appurl]: https://nginx.org/
-[hub]: https://hub.docker.com/r/linuxserver/nginx/
+[![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)](https://linuxserver.io)
 
-[![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)][linuxserverurl]
+The [LinuxServer.io](https://linuxserver.io) team brings you another container release featuring :-
 
-The [LinuxServer.io][linuxserverurl] team brings you another container release featuring easy user mapping and community support. Find us for support at:
-* [forum.linuxserver.io][forumurl]
-* [IRC][ircurl] on freenode at `#linuxserver.io`
-* [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
+ * regular and timely application updates
+ * easy user mappings (PGID, PUID)
+ * custom base image with s6 overlay
+ * weekly base OS updates with common layers across the entire LinuxServer.io ecosystem to minimise space usage, down time and bandwidth
+ * regular security updates
 
-# linuxserver/nginx
-[![](https://images.microbadger.com/badges/version/linuxserver/nginx.svg)](https://microbadger.com/images/linuxserver/nginx "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/nginx.svg)](https://microbadger.com/images/linuxserver/nginx "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/nginx.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/nginx.svg)][hub][![Build Status](https://ci.linuxserver.io/buildStatus/icon?job=Docker-Builders/x86-64/x86-64-nginx)](https://ci.linuxserver.io/job/Docker-Builders/job/x86-64/job/x86-64-nginx/)
+Find us at:
+* [Discord](https://discord.gg/YWrKVTn) - realtime support / chat with the community and the team.
+* [IRC](https://irc.linuxserver.io) - on freenode at `#linuxserver.io`. Our primary support channel is Discord.
+* [Blog](https://blog.linuxserver.io) - all the things you can do with our containers including How-To guides, opinions and much more!
+* [Podcast](https://podcast.linuxserver.io) - on hiatus. Coming back soon (late 2018).
 
-This Container is a simple nginx webserver configured with default and ssl, and all relevant config files moved out the user via /config for ultimate control. it contains some of the basic php-packages. and is built on our internal nginx baseimage.
+# PSA: Changes are happening
 
-[![nginx](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nginx-banner.png)][appurl]
+From August 2018 onwards, Linuxserver are in the midst of switching to a new CI platform which will enable us to build and release multiple architectures under a single repo. To this end, existing images for `arm64` and `armhf` builds are being deprecated. They are replaced by a manifest file in each container which automatically pulls the correct image for your architecture. You'll also be able to pull based on a specific architecture tag.
+
+TLDR: Multi-arch support is changing from multiple repos to one repo per container image.
+
+# [linuxserver/Nginx](https://github.com/linuxserver/docker-Nginx)
+[![](https://images.microbadger.com/badges/version/linuxserver/Nginx.svg)](https://microbadger.com/images/linuxserver/Nginx "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/linuxserver/Nginx.svg)](https://microbadger.com/images/linuxserver/Nginx "Get your own version badge on microbadger.com")
+![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/Nginx.svg)
+![Docker Stars](https://img.shields.io/docker/stars/linuxserver/Nginx.svg)
+
+[Nginx](https://nginx.org/) is a simple webserver with php support. The config files reside in `/config` for easy user customization.
+
+[![Nginx](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nginx-banner.png)](https://nginx.org/)
+
+## Supported Architectures
+
+Our images support multiple architectures such as `X86-64`, `arm64` and `armhf`. We utilise the docker manifest for multi-platform awareness. More information is available from docker [here](https://github.com/docker/distribution/blob/master/docs/spec/manifest-v2-2.md#manifest-list). 
+
+The architectures supported by this image are:
+
+| Architecture | Tag |
+| :----: | --- |
+| X86-64 | amd64-latest |
+| arm64 | arm64v8-latest |
+| armhf | arm32v6-latest |
 
 ## Usage
 
+Here are some example snippets to help you get started creating a container.
+
+### docker
+
 ```
 docker create \
---name=nginx \
--v <path to data>:/config \
--e PGID=<gid> -e PUID=<uid>  \
--p 80:80 -p 443:443 \
--e TZ=<timezone> \
-linuxserver/nginx
+  --name=Nginx \
+  -e PUID=1001 \
+  -e PGID=1001 \
+  -e TZ=Europe/London \
+  -p 80:80 \
+  -p 443:443 \
+  -v </path/to/appdata/config>:/config \
+  linuxserver/Nginx
+```
+
+
+### docker-compose
+
+Compatible with docker-compose v2 schemas.
+
+```
+---
+version: "2"
+services:
+  Nginx:
+    image: linuxserver/Nginx
+    container_name: Nginx
+    environment:
+      - PUID=1001
+      - PGID=1001
+      - TZ=Europe/London
+    volumes:
+      - </path/to/appdata/config>:/config
+    ports:
+      - 80:80
+      - 443:443
+    mem_limit: 4096m
+    restart: unless-stopped
 ```
 
 ## Parameters
 
-`The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side. 
-For example with a port -p external:internal - what this shows is the port mapping from internal to external of the container.
-So -p 8080:80 would expose port 80 from inside the container to be accessible from the host's IP on port 8080
-http://192.168.x.x:8080 would show you what's running INSIDE the container on port 80.`
+Container images are configured using parameters passed at runtime (such as those above). These parameters are separated by a colon and indicate `<external>:<internal>` respectively. For example, `-p 8080:80` would expose port `80` from inside the container to be accessible from the host's IP on port `8080` outside the container.
 
+| Parameter | Function |
+| :----: | --- |
+| `-p 80` | http |
+| `-p 443` | https |
+| `-e PUID=1001` | for UserID - see below for explanation |
+| `-e PGID=1001` | for GroupID - see below for explanation |
+| `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London |
+| `-v /config` | Contains your www content and all relevant configuration files. |
 
-* `-p 80` - The web-services.
-* `-p 443` - The SSL-Based Webservice
-* `-v /config` - Contains your www content and all relevant configuration files.
-* `-e PGID` for GroupID - see below for explanation
-* `-e PUID` for UserID - see below for explanation
-* `-e TZ` - timezone ie. `America/New_York`
+## User / Group Identifiers
 
-It is based on alpine linux with s6 overlay, for shell access whilst the container is running do `docker exec -it nginx /bin/bash`.
+When using volumes (`-v` flags) permissions issues can arise between the host OS and the container, we avoid this issue by allowing you to specify the user `PUID` and group `PGID`.
 
-### User / Group Identifiers
+Ensure any volume directories on the host are owned by the same user you specify and any permissions issues will vanish like magic.
 
-Sometimes when using data volumes (`-v` flags) permissions issues can arise between the host OS and the container. We avoid this issue by allowing you to specify the user `PUID` and group `PGID`. Ensure the data volume directory on the host is owned by the same user you specify and it will "just work" ™.
-
-In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as below:
+In this instance `PUID=1001` and `PGID=1001`, to find yours use `id user` as below:
 
 ```
-  $ id <dockeruser>
+  $ id username
     uid=1001(dockeruser) gid=1001(dockergroup) groups=1001(dockergroup)
 ```
 
-## Setting up the application 
+&nbsp;
+## Application Setup
 
-Add your web files to /config/www for hosting. 
-
-*Protip: This container is best combined with a sql server, e.g. [mariadb](https://hub.docker.com/r/linuxserver/mariadb/)* 
-
-
-## Info
-
-* To monitor the logs of the container in realtime `docker logs -f nginx`.
+Add your web files to `/config/www` for hosting.
+Modify the nginx, php and site config files under `/config` as needed
+*Protip: This container is best combined with a sql server, e.g. [mariadb](https://hub.docker.com/r/linuxserver/mariadb/)*
 
 
+
+## Support Info
+
+* Shell access whilst the container is running: `docker exec -it Nginx /bin/bash`
+* To monitor the logs of the container in realtime: `docker logs -f Nginx`
 * container version number 
-
-`docker inspect -f '{{ index .Config.Labels "build_version" }}' nginx`
-
+  * `docker inspect -f '{{ index .Config.Labels "build_version" }}' Nginx`
 * image version number
-
-`docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/nginx`
+  * `docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/Nginx`
 
 ## Versions
 
-+ **17.08.18:** Rebase to alpine 3.8, inherit nginx.conf from nginx baseimage
-+ **11.05.18:** Add php pgsql support
-+ **19.04.18:** Bind memcached to localhost only, add php7-sqlite3
-+ **05.01.18:** Rebase to alpine 3.7
-+ **08.11.17:** Add php7 soap module
-+ **31.10.17:** Add php7 exif and xmlreader modules
-+ **30.09.17:** Copy additional root files into image
-+ **24.09.17:** Add memcached service
-+ **31.08.17:** Add php7-phar
-+ **14.07.17:** Enable modules dynamically in nginx.conf
-+ **22.06.17:** Add various nginx modules and enable all modules in the default nginx.conf
-+ **05.06.17:** Add php7-bz2
-+ **25.05.17:** Rebase to alpine 3.6.
-+ **18.04.17:** Add php7-sockets
-+ **27.02.17:** Rebase to alpine 3.5, update to nginx 1.10.2 and php7
-+ **14.10.16:** Add version layer information.
-+ **10.09.16:** Add badges to README. 
-+ **05.12.15:** Intial Release.
+* **28.09.18:** - Multi-arch image.
+* **17.08.18:** - Rebase to alpine 3.8, inherit nginx.conf from nginx baseimage.
+* **11.05.18:** - Add php pgsql support.
+* **19.04.18:** - Bind memcached to localhost only, add php7-sqlite3.
+* **05.01.18:** - Rebase to alpine 3.7.
+* **08.11.17:** - Add php7 soap module.
+* **31.10.17:** - Add php7 exif and xmlreader modules.
+* **30.09.17:** - Copy additional root files into image.
+* **24.09.17:** - Add memcached service.
+* **31.08.17:** - Add php7-phar.
+* **14.07.17:** - Enable modules dynamically in nginx.conf.
+* **22.06.17:** - Add various nginx modules and enable all modules in the default nginx.conf.
+* **05.06.17:** - Add php7-bz2.
+* **25.05.17:** - Rebase to alpine 3.6.
+* **18.04.17:** - Add php7-sockets.
+* **27.02.17:** - Rebase to alpine 3.5, update to nginx 1.10.2 and php7.
+* **14.10.16:** - Add version layer information.
+* **10.09.16:** - Add badges to README.
+* **05.12.15:** - Intial Release.

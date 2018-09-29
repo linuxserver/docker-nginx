@@ -494,7 +494,7 @@ pipeline {
                   -e DOCKERHUB_USERNAME=$DOCKERUSER \
                   -e DOCKERHUB_PASSWORD=$DOCKERPASS \
                   -e GIT_REPOSITORY=${LS_USER}/${LS_REPO} \
-                  -e DOCKER_REPOSITORY=${DOCKERHUB_IMAGE} \
+                  -e DOCKER_REPOSITORY=${IMAGE} \
                   -e GIT_BRANCH=master \
                   lsiodev/readme-sync bash -c 'node sync' '''
         }
