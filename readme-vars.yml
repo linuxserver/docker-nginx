@@ -34,9 +34,9 @@ optional_block_1_items: ""
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
-  Add your web files to `/config/www` for hosting.
-  Modify the nginx, php and site config files under `/config` as needed
-  *Protip: This container is best combined with a sql server, e.g. [mariadb](https://hub.docker.com/r/linuxserver/mariadb/)*
+  - Add your web files to `/config/www` for hosting.
+  - Modify the nginx, php and site config files under `/config` as needed
+  - *Protip: This container is best combined with a sql server, e.g. [mariadb](https://hub.docker.com/r/linuxserver/mariadb/)*
 
 # changelog
 changelogs:
