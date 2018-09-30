@@ -1,7 +1,7 @@
 ---
 
 # project information
-project_name: Nginx
+project_name: nginx
 project_url: "https://nginx.org/"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nginx-banner.png"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a simple webserver with php support. The config files reside in `/config` for easy user customization."
