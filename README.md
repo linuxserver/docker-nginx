@@ -20,15 +20,15 @@ From August 2018 onwards, Linuxserver are in the midst of switching to a new CI 
 
 TLDR: Multi-arch support is changing from multiple repos to one repo per container image.
 
-# [linuxserver/Nginx](https://github.com/linuxserver/docker-Nginx)
-[![](https://images.microbadger.com/badges/version/linuxserver/Nginx.svg)](https://microbadger.com/images/linuxserver/Nginx "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/image/linuxserver/Nginx.svg)](https://microbadger.com/images/linuxserver/Nginx "Get your own version badge on microbadger.com")
-![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/Nginx.svg)
-![Docker Stars](https://img.shields.io/docker/stars/linuxserver/Nginx.svg)
+# [linuxserver/nginx](https://github.com/linuxserver/docker-nginx)
+[![](https://images.microbadger.com/badges/version/linuxserver/nginx.svg)](https://microbadger.com/images/linuxserver/nginx "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/linuxserver/nginx.svg)](https://microbadger.com/images/linuxserver/nginx "Get your own version badge on microbadger.com")
+![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/nginx.svg)
+![Docker Stars](https://img.shields.io/docker/stars/linuxserver/nginx.svg)
 
 [Nginx](https://nginx.org/) is a simple webserver with php support. The config files reside in `/config` for easy user customization.
 
-[![Nginx](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nginx-banner.png)](https://nginx.org/)
+[![nginx](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nginx-banner.png)](https://nginx.org/)
 
 ## Supported Architectures
 
@@ -50,14 +50,14 @@ Here are some example snippets to help you get started creating a container.
 
 ```
 docker create \
-  --name=Nginx \
+  --name=nginx \
   -e PUID=1001 \
   -e PGID=1001 \
   -e TZ=Europe/London \
   -p 80:80 \
   -p 443:443 \
   -v </path/to/appdata/config>:/config \
-  linuxserver/Nginx
+  linuxserver/nginx
 ```
 
 
@@ -69,9 +69,9 @@ Compatible with docker-compose v2 schemas.
 ---
 version: "2"
 services:
-  Nginx:
-    image: linuxserver/Nginx
-    container_name: Nginx
+  nginx:
+    image: linuxserver/nginx
+    container_name: nginx
     environment:
       - PUID=1001
       - PGID=1001
@@ -114,20 +114,20 @@ In this instance `PUID=1001` and `PGID=1001`, to find yours use `id user` as bel
 &nbsp;
 ## Application Setup
 
-Add your web files to `/config/www` for hosting.
-Modify the nginx, php and site config files under `/config` as needed
+Add your web files to `/config/www` for hosting.  
+Modify the nginx, php and site config files under `/config` as needed  
 *Protip: This container is best combined with a sql server, e.g. [mariadb](https://hub.docker.com/r/linuxserver/mariadb/)*
 
 
 
 ## Support Info
 
-* Shell access whilst the container is running: `docker exec -it Nginx /bin/bash`
-* To monitor the logs of the container in realtime: `docker logs -f Nginx`
+* Shell access whilst the container is running: `docker exec -it nginx /bin/bash`
+* To monitor the logs of the container in realtime: `docker logs -f nginx`
 * container version number 
-  * `docker inspect -f '{{ index .Config.Labels "build_version" }}' Nginx`
+  * `docker inspect -f '{{ index .Config.Labels "build_version" }}' nginx`
 * image version number
-  * `docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/Nginx`
+  * `docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/nginx`
 
 ## Versions
 
