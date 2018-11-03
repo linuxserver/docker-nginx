@@ -21,6 +21,7 @@ From August 2018 onwards, Linuxserver are in the midst of switching to a new CI 
 TLDR: Multi-arch support is changing from multiple repos to one repo per container image.
 
 # [linuxserver/nginx](https://github.com/linuxserver/docker-nginx)
+[![](https://img.shields.io/discord/354974912613449730.svg?logo=discord&label=LSIO%20Discord&style=flat-square)](https://discord.gg/YWrKVTn)
 [![](https://images.microbadger.com/badges/version/linuxserver/nginx.svg)](https://microbadger.com/images/linuxserver/nginx "Get your own version badge on microbadger.com")
 [![](https://images.microbadger.com/badges/image/linuxserver/nginx.svg)](https://microbadger.com/images/linuxserver/nginx "Get your own version badge on microbadger.com")
 ![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/nginx.svg)
@@ -57,6 +58,7 @@ docker create \
   -p 80:80 \
   -p 443:443 \
   -v </path/to/appdata/config>:/config \
+  --restart unless-stopped
   linuxserver/nginx
 ```
 
