@@ -14,9 +14,10 @@ ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
 
 # install packages
 RUN \
- apk add --no-cache \
+ apk add --no-cache --upgrade \
 	curl \
 	memcached \
+	nginx \
 	nginx-mod-http-echo \
 	nginx-mod-http-fancyindex \
 	nginx-mod-http-geoip \
