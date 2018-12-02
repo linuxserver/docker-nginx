@@ -58,7 +58,7 @@ docker create \
   -p 80:80 \
   -p 443:443 \
   -v </path/to/appdata/config>:/config \
-  --restart unless-stopped
+  --restart unless-stopped \
   linuxserver/nginx
 ```
 
