@@ -28,7 +28,7 @@ tzdata tzdata-2018f-r0
 libuuid libuuid-2.32-r0
 apr apr-1.6.3-r1
 expat expat-2.2.5-r0
-apr-util apr-util-1.6.1-r2
+apr-util apr-util-1.6.1-r3
 apache2-utils apache2-utils-2.4.35-r0
 nghttp2-libs nghttp2-libs-1.32.0-r0
 libssh2 libssh2-1.8.0-r3
@@ -71,7 +71,7 @@ nginx-mod-http-headers-more nginx-mod-http-headers-more-1.14.2-r0
 libbz2 libbz2-1.0.6-r6
 libpng libpng-1.6.34-r1
 freetype freetype-2.9.1-r1
-libjpeg-turbo libjpeg-turbo-1.5.3-r3
+libjpeg-turbo libjpeg-turbo-1.5.3-r4
 libwebp libwebp-1.0.0-r0
 libgd libgd-2.2.5-r1
 nginx-mod-http-image-filter nginx-mod-http-image-filter-1.14.2-r0
