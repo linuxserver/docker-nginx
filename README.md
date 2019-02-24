@@ -158,6 +158,7 @@ Below are the instructions for updating containers:
 
 ## Versions
 
+* **22.02.19:** - Rebasing to alpine 3.9.
 * **18.11.18:** - Attempt to upgrade packages during build.
 * **28.09.18:** - Multi-arch image.
 * **17.08.18:** - Rebase to alpine 3.8, inherit nginx.conf from nginx baseimage.
