@@ -57,6 +57,3 @@ RUN \
 	php7-xml \
 	php7-xmlreader \
 	php7-zip
-
-# add local files
-COPY root/ /
