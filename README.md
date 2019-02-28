@@ -14,12 +14,6 @@ Find us at:
 * [Blog](https://blog.linuxserver.io) - all the things you can do with our containers including How-To guides, opinions and much more!
 * [Podcast](https://anchor.fm/linuxserverio) - on hiatus. Coming back soon (late 2018).
 
-# PSA: Changes are happening
-
-From August 2018 onwards, Linuxserver are in the midst of switching to a new CI platform which will enable us to build and release multiple architectures under a single repo. To this end, existing images for `arm64` and `armhf` builds are being deprecated. They are replaced by a manifest file in each container which automatically pulls the correct image for your architecture. You'll also be able to pull based on a specific architecture tag.
-
-TLDR: Multi-arch support is changing from multiple repos to one repo per container image.
-
 # [linuxserver/nginx](https://github.com/linuxserver/docker-nginx)
 [![](https://img.shields.io/discord/354974912613449730.svg?logo=discord&label=LSIO%20Discord&style=flat-square)](https://discord.gg/YWrKVTn)
 [![](https://images.microbadger.com/badges/version/linuxserver/nginx.svg)](https://microbadger.com/images/linuxserver/nginx "Get your own version badge on microbadger.com")
@@ -35,7 +29,7 @@ TLDR: Multi-arch support is changing from multiple repos to one repo per contain
 
 ## Supported Architectures
 
-Our images support multiple architectures such as `x86-64`, `arm64` and `armhf`. We utilise the docker manifest for multi-platform awareness. More information is available from docker [here](https://github.com/docker/distribution/blob/master/docs/spec/manifest-v2-2.md#manifest-list). 
+Our images support multiple architectures such as `x86-64`, `arm64` and `armhf`. We utilise the docker manifest for multi-platform awareness. More information is available from docker [here](https://github.com/docker/distribution/blob/master/docs/spec/manifest-v2-2.md#manifest-list) and our announcement [here](https://blog.linuxserver.io/2019/02/21/the-lsio-pipeline-project/). 
 
 Simply pulling `linuxserver/nginx` should retrieve the correct image for your arch, but you can also pull specific arch images via tags.
 
@@ -158,6 +152,7 @@ Below are the instructions for updating containers:
 
 ## Versions
 
+* **28.02.19:** - Add php7-opcache, remove memcached service due to issues on aarch64 (let us know if you need to enable it).
 * **22.02.19:** - Rebasing to alpine 3.9.
 * **18.11.18:** - Attempt to upgrade packages during build.
 * **28.09.18:** - Multi-arch image.
