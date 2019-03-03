@@ -40,6 +40,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "02.03.19:", desc: "Add php intl and posix modules." }
   - { date: "28.02.19:", desc: "Add php7-opcache, remove memcached service due to issues on aarch64 (let us know if you need to enable it)." }
   - { date: "22.02.19:", desc: "Rebasing to alpine 3.9." }
   - { date: "18.11.18:", desc: "Attempt to upgrade packages during build." }
