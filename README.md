@@ -161,6 +161,7 @@ Below are the instructions for updating containers:
 
 ## Versions
 
+* **30.04.19:** - Add php-redis.
 * **23.03.19:** - Switching to new Base images, shift to arm32v7 tag.
 * **02.03.19:** - Add php intl and posix modules.
 * **28.02.19:** - Add php7-opcache, remove memcached service due to issues on aarch64 (let us know if you need to enable it).
