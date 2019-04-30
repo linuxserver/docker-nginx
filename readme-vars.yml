@@ -40,6 +40,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "30.04.19:", desc: "Add php-redis." }
   - { date: "23.03.19:", desc: "Switching to new Base images, shift to arm32v7 tag." }
   - { date: "02.03.19:", desc: "Add php intl and posix modules." }
   - { date: "28.02.19:", desc: "Add php7-opcache, remove memcached service due to issues on aarch64 (let us know if you need to enable it)." }
