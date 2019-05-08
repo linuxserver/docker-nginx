@@ -59,4 +59,6 @@ RUN \
 	php7-tokenizer \
 	php7-xml \
 	php7-xmlreader \
-	php7-zip
+	php7-zip && \
+ echo "**** configure nginx ****" && \
+ rm -f /etc/nginx/conf.d/default.conf

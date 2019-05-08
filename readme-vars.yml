@@ -40,6 +40,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "08.05.19:", desc: "Remove default.conf when nginx is upgraded in downstream image." }
   - { date: "30.04.19:", desc: "Add php-redis." }
   - { date: "23.03.19:", desc: "Switching to new Base images, shift to arm32v7 tag." }
   - { date: "02.03.19:", desc: "Add php intl and posix modules." }
