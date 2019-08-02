@@ -28,7 +28,7 @@ libcurl-7.65.1-r0
 libedit-20190324.3.1-r0
 libevent-2.1.10-r0
 libgcc-8.3.0-r0
-libgcrypt-1.8.4-r1
+libgcrypt-1.8.4-r2
 libgd-2.2.5-r2
 libgpg-error-1.36-r2
 libice-1.0.9-r3
@@ -109,6 +109,7 @@ php7-gd-7.3.7-r0
 php7-iconv-7.3.7-r0
 php7-intl-7.3.7-r0
 php7-json-7.3.6-r0
+php7-ldap-7.3.7-r0
 php7-mbstring-7.3.7-r0
 php7-mysqli-7.3.7-r0
 php7-mysqlnd-7.3.7-r0
