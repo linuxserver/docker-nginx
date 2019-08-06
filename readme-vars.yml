@@ -40,6 +40,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "06.08.19:", desc: "Add php7-bcmath, ph7-pear, php7-xmlrpc and php7-ftp." }
   - { date: "02.08.19:", desc: "Add php7-ldap." }
   - { date: "28.06.19:", desc: "Rebasing to alpine 3.10." }
   - { date: "08.05.19:", desc: "Remove default.conf when nginx is upgraded in downstream image." }
