@@ -33,11 +33,13 @@ RUN \
 	nginx-mod-stream \
 	nginx-mod-stream-geoip \
 	nginx-vim \
+	php7-bcmath \
 	php7-bz2 \
 	php7-ctype \
 	php7-curl \
 	php7-dom \
 	php7-exif \
+	php7-ftp \
 	php7-gd \
 	php7-iconv \
 	php7-intl \
@@ -50,6 +52,7 @@ RUN \
 	php7-pdo_mysql \
 	php7-pdo_pgsql \
 	php7-pdo_sqlite \
+	php7-pear \
 	php7-pecl-redis \
 	php7-pgsql \
 	php7-phar \
@@ -60,6 +63,7 @@ RUN \
 	php7-tokenizer \
 	php7-xml \
 	php7-xmlreader \
+	php7-xmlrpc \
 	php7-zip && \
  echo "**** configure nginx ****" && \
  rm -f /etc/nginx/conf.d/default.conf
