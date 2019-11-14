@@ -40,6 +40,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "13.11.19:", desc: "Add php7-pdo_odbc." }
   - { date: "24.10.19:", desc: "Add php7-pecl-imagick." }
   - { date: "06.08.19:", desc: "Add php7-bcmath, ph7-pear, php7-xmlrpc and php7-ftp." }
   - { date: "02.08.19:", desc: "Add php7-ldap." }
