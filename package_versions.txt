@@ -16,8 +16,8 @@ expat-2.2.8-r0
 fontconfig-2.13.1-r0
 freetype-2.10.0-r0
 geoip-1.6.12-r1
-git-2.22.0-r0
-git-perl-2.22.0-r0
+git-2.22.2-r0
+git-perl-2.22.2-r0
 icu-libs-64.2-r0
 imagemagick-libs-7.0.8.58-r0
 lcms2-2.9-r1
@@ -99,7 +99,7 @@ pcre-8.43-r0
 pcre2-10.33-r0
 perl-5.28.2-r1
 perl-error-0.17027-r0
-perl-git-2.22.0-r0
+perl-git-2.22.2-r0
 php7-7.3.11-r0
 php7-bcmath-7.3.11-r0
 php7-bz2-7.3.11-r0
