@@ -40,6 +40,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "19.12.19:", desc: "Rebasing to alpine 3.11." }
   - { date: "18.12.19:", desc: "Add php7-imap and php7-pecl-apcu." }
   - { date: "13.11.19:", desc: "Add php7-pdo_odbc." }
   - { date: "24.10.19:", desc: "Add php7-pecl-imagick." }
