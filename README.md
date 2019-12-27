@@ -210,6 +210,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **19.12.19:** - Rebasing to alpine 3.11.
 * **18.12.19:** - Add php7-imap and php7-pecl-apcu.
 * **13.11.19:** - Add php7-pdo_odbc.
 * **24.10.19:** - Add php7-pecl-imagick.
