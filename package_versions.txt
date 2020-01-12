@@ -36,7 +36,7 @@ libgcrypt-1.8.5-r0
 libgd-2.2.5-r2
 libgpg-error-1.36-r2
 libice-1.0.10-r0
-libjpeg-turbo-2.0.3-r0
+libjpeg-turbo-2.0.4-r0
 libldap-2.4.48-r1
 libltdl-2.4.6-r7
 libmagic-5.37-r1
