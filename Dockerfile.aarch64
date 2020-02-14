@@ -18,6 +18,7 @@ RUN \
 	nginx-mod-http-echo \
 	nginx-mod-http-fancyindex \
 	nginx-mod-http-geoip \
+	nginx-mod-http-geoip2 \
 	nginx-mod-http-headers-more \
 	nginx-mod-http-image-filter \
 	nginx-mod-http-lua \
@@ -32,6 +33,7 @@ RUN \
 	nginx-mod-rtmp \
 	nginx-mod-stream \
 	nginx-mod-stream-geoip \
+	nginx-mod-stream-geoip2 \
 	nginx-vim \
 	php7-bcmath \
 	php7-bz2 \
