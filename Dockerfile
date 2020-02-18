@@ -4,7 +4,7 @@ FROM lsiobase/nginx:3.11
 ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="Stian Larsen,sparklyballs,aptalca"
+LABEL maintainer="aptalca"
 
 # environment settings
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
@@ -73,3 +73,6 @@ RUN \
 	php7-zip && \
  echo "**** configure nginx ****" && \
  rm -f /etc/nginx/conf.d/default.conf
+
+# add local files
+COPY root/ /
