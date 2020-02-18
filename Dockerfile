@@ -72,7 +72,10 @@ RUN \
 	php7-xmlrpc \
 	php7-zip && \
  echo "**** configure nginx ****" && \
- rm -f /etc/nginx/conf.d/default.conf
+ rm -f /etc/nginx/conf.d/default.conf && \
+ sed -i \
+	's|include /config/nginx/site-confs/\*;|include /config/nginx/site-confs/\*;\n\tlua_load_resty_core off;|g' \
+	/defaults/nginx.conf
 
 # add local files
 COPY root/ /
