@@ -210,6 +210,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **11.03.20:** - Add php7-sodium.
 * **18.02.20:** - Add geoip2, suppress lua warning.
 * **19.12.19:** - Rebasing to alpine 3.11.
 * **18.12.19:** - Add php7-imap and php7-pecl-apcu.
