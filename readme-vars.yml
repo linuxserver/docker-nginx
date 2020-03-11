@@ -40,6 +40,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "11.03.20:", desc: "Add php7-sodium." }
   - { date: "18.02.20:", desc: "Add geoip2, suppress lua warning." }
   - { date: "19.12.19:", desc: "Rebasing to alpine 3.11." }
   - { date: "18.12.19:", desc: "Add php7-imap and php7-pecl-apcu." }
