@@ -140,7 +140,7 @@ php7-pecl-igbinary-3.1.2-r0
 php7-pecl-imagick-3.4.4-r3
 php7-pecl-mcrypt-1.0.3-r0
 php7-pecl-memcached-3.1.5-r0
-php7-pecl-redis-5.2.2-r0
+php7-pecl-redis-5.2.2-r1
 php7-pgsql-7.3.19-r0
 php7-phar-7.3.19-r0
 php7-posix-7.3.19-r0
