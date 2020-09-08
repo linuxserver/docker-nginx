@@ -71,6 +71,7 @@ RUN \
 	php7-xml \
 	php7-xmlreader \
 	php7-xmlrpc \
+	php7-xsl \
 	php7-zip && \
  echo "**** configure nginx ****" && \
  rm -f /etc/nginx/conf.d/default.conf && \
