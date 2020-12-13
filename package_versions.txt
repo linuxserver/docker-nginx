@@ -12,7 +12,7 @@ c-client-2007f-r11
 ca-certificates-20191127-r4
 ca-certificates-bundle-20191127-r4
 coreutils-8.32-r0
-curl-7.69.1-r1
+curl-7.69.1-r3
 db-5.3.28-r1
 expat-2.2.9-r1
 fontconfig-2.13.1-r2
@@ -21,15 +21,15 @@ geoip-1.6.12-r1
 git-2.26.2-r0
 git-perl-2.26.2-r0
 icu-libs-67.1-r0
-imagemagick-libs-7.0.10.25-r0
+imagemagick-libs-7.0.10.48-r0
 lcms2-2.9-r1
 libacl-2.2.53-r0
 libattr-2.4.48-r0
 libbsd-0.10.0-r0
 libbz2-1.0.8-r1
 libc-utils-0.7.2-r3
-libcrypto1.1-1.1.1g-r0
-libcurl-7.69.1-r1
+libcrypto1.1-1.1.1i-r0
+libcurl-7.69.1-r3
 libedit-20191231.3.1-r0
 libevent-2.1.11-r1
 libgcc-9.3.0-r2
@@ -39,7 +39,7 @@ libgpg-error-1.37-r0
 libice-1.0.10-r0
 libintl-0.20.2-r0
 libjpeg-turbo-2.0.5-r0
-libldap-2.4.50-r0
+libldap-2.4.50-r1
 libltdl-2.4.6-r7
 libmagic-5.38-r0
 libmaxminddb-1.4.2-r1
@@ -54,7 +54,7 @@ libsasl-2.1.27-r6
 libseccomp-2.4.3-r0
 libsm-1.2.3-r0
 libsodium-1.0.18-r0
-libssl1.1-1.1.1g-r0
+libssl1.1-1.1.1i-r0
 libstdc++-9.3.0-r2
 libtls-standalone-2.9.1-r1
 libuuid-2.35.2-r0
@@ -101,7 +101,7 @@ nginx-mod-stream-1.18.0-r1
 nginx-mod-stream-geoip-1.18.0-r1
 nginx-mod-stream-geoip2-1.18.0-r1
 nginx-vim-1.18.0-r1
-openssl-1.1.1g-r0
+openssl-1.1.1i-r0
 pcre-8.44-r0
 pcre2-10.35-r0
 perl-5.30.3-r0
@@ -137,7 +137,7 @@ php7-pdo_sqlite-7.3.25-r0
 php7-pear-7.3.25-r0
 php7-pecl-apcu-5.1.19-r0
 php7-pecl-igbinary-3.1.6-r0
-php7-pecl-imagick-3.4.4-r3
+php7-pecl-imagick-3.4.4-r4
 php7-pecl-mcrypt-1.0.3-r0
 php7-pecl-memcached-3.1.5-r0
 php7-pecl-redis-5.2.2-r1
