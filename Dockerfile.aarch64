@@ -15,14 +15,14 @@ RUN \
 	curl \
 	memcached \
 	nginx \
+	nginx-mod-http-brotli \
+	nginx-mod-http-dav-ext \
 	nginx-mod-http-echo \
 	nginx-mod-http-fancyindex \
 	nginx-mod-http-geoip \
 	nginx-mod-http-geoip2 \
 	nginx-mod-http-headers-more \
 	nginx-mod-http-image-filter \
-	nginx-mod-http-lua \
-	nginx-mod-http-lua-upstream \
 	nginx-mod-http-nchan \
 	nginx-mod-http-perl \
 	nginx-mod-http-redis2 \
@@ -76,7 +76,7 @@ RUN \
  echo "**** configure nginx ****" && \
  rm -f /etc/nginx/conf.d/default.conf && \
  sed -i \
-	's|include /config/nginx/site-confs/\*;|include /config/nginx/site-confs/\*;\n\tlua_load_resty_core off;|g' \
+	's|include /config/nginx/site-confs/\*;|include /config/nginx/site-confs/\*;\n\t#Removed lua. Do not remove this comment|g' \
 	/defaults/nginx.conf
 
 # add local files
