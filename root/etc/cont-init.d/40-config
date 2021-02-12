@@ -4,6 +4,12 @@
 mkdir -p \
 	/config/geoip2db
 
+# remove lua bits from nginx.conf if not done before
+if ! grep -q '#Removed lua' /config/nginx/nginx.conf; then 
+  echo "Removing lua specific info from nginx.conf"
+  sed -i 's|\tlua_load_resty_core off;|\t#Removed lua. Do not remove this comment|g' /config/nginx/nginx.conf
+fi
+
 # create GeoIP2 folder symlink
 [[ -d /var/lib/libmaxminddb ]] && [[ ! -L /var/lib/libmaxminddb ]] && \
   rm -rf /var/lib/libmaxminddb
