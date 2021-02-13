@@ -2,7 +2,7 @@
 
 # jenkins variables
 project_name: docker-nginx
-external_type: os
+external_type: alpine_repo
 release_type: stable
 release_tag: latest
 ls_branch: master
@@ -15,6 +15,9 @@ repo_vars:
   - DEV_DOCKERHUB_IMAGE = 'lsiodev/nginx'
   - PR_DOCKERHUB_IMAGE = 'lspipepr/nginx'
   - DIST_IMAGE = 'alpine'
+  - DIST_TAG = '3.13'
+  - DIST_REPO = 'http://dl-cdn.alpinelinux.org/alpine/v3.13/main/'
+  - DIST_REPO_PACKAGES = 'nginx'
   - MULTIARCH='true'
   - CI='true'
   - CI_WEB='true'
