@@ -223,6 +223,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **13.02.21:** - Remove php7-pecl-imagick (it now installs the full imagemagick with too much crud). Users can install it via [this docker mod](https://github.com/linuxserver/docker-mods/tree/swag-imagemagick).
 * **09.02.21:** - Rebasing to alpine 3.13. Add nginx mods brotli and dav-ext. Remove nginx mods lua and lua-upstream (due to regression over the last couple of years).
 * **08.09.20:** - Add php7-xsl.
 * **01.06.20:** - Rebasing to alpine 3.12.
