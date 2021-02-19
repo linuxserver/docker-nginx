@@ -25,7 +25,7 @@ libattr-2.4.48-r0
 libbsd-0.10.0-r0
 libbz2-1.0.8-r1
 libc-utils-0.7.2-r3
-libcrypto1.1-1.1.1i-r0
+libcrypto1.1-1.1.1j-r0
 libcurl-7.74.0-r0
 libedit-20191231.3.1-r1
 libevent-2.1.12-r1
@@ -36,7 +36,7 @@ libgpg-error-1.41-r0
 libice-1.0.10-r0
 libintl-0.20.2-r2
 libjpeg-turbo-2.0.6-r0
-libldap-2.4.56-r0
+libldap-2.4.57-r0
 libmagic-5.39-r0
 libmaxminddb-1.5.0-r1
 libmcrypt-2.5.8-r9
@@ -50,7 +50,7 @@ libsasl-2.1.27-r10
 libseccomp-2.5.1-r0
 libsm-1.2.3-r0
 libsodium-1.0.18-r0
-libssl1.1-1.1.1i-r0
+libssl1.1-1.1.1j-r0
 libstdc++-10.2.1_pre1-r3
 libtls-standalone-2.9.1-r1
 libuuid-2.36.1-r1
@@ -98,7 +98,7 @@ nginx-mod-stream-geoip-1.18.0-r13
 nginx-mod-stream-geoip2-1.18.0-r13
 nginx-vim-1.18.0-r13
 oniguruma-6.9.6-r0
-openssl-1.1.1i-r0
+openssl-1.1.1j-r0
 pcre-8.44-r0
 pcre2-10.36-r0
 perl-5.32.0-r0
