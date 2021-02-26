@@ -36,13 +36,13 @@ libgpg-error-1.41-r0
 libice-1.0.10-r0
 libintl-0.20.2-r2
 libjpeg-turbo-2.0.6-r0
-libldap-2.4.57-r0
+libldap-2.4.57-r1
 libmagic-5.39-r0
 libmaxminddb-1.5.0-r1
 libmcrypt-2.5.8-r9
 libmemcached-libs-1.0.18-r4
 libpng-1.6.37-r1
-libpq-13.1-r2
+libpq-13.2-r0
 libproc-3.3.16-r0
 libressl3.1-libcrypto-3.1.5-r0
 libressl3.1-libssl-3.1.5-r0
