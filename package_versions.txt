@@ -17,8 +17,8 @@ expat-2.2.10-r1
 freetype-2.10.4-r1
 gdbm-1.19-r0
 geoip-1.6.12-r1
-git-2.30.1-r0
-git-perl-2.30.1-r0
+git-2.30.2-r0
+git-perl-2.30.2-r0
 icu-libs-67.1-r2
 libacl-2.2.53-r0
 libattr-2.4.48-r0
@@ -103,7 +103,7 @@ pcre-8.44-r0
 pcre2-10.36-r0
 perl-5.32.0-r0
 perl-error-0.17029-r1
-perl-git-2.30.1-r0
+perl-git-2.30.2-r0
 php7-7.4.15-r0
 php7-bcmath-7.4.15-r0
 php7-bz2-7.4.15-r0
