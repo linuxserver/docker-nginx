@@ -132,7 +132,7 @@ php7-pdo_odbc-7.4.15-r0
 php7-pdo_pgsql-7.4.15-r0
 php7-pdo_sqlite-7.4.15-r0
 php7-pear-7.4.15-r0
-php7-pecl-apcu-5.1.19-r1
+php7-pecl-apcu-5.1.20-r0
 php7-pecl-igbinary-3.2.2_rc1-r0
 php7-pecl-mcrypt-1.0.4-r0
 php7-pecl-memcached-3.1.5-r2
