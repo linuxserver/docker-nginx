@@ -40,6 +40,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "01.07.21:", desc: "Rebasing to alpine 3.14." }
   - { date: "24.06.21:", desc: "Update default nginx conf folder." }
   - { date: "12.04.21:", desc: "Add php7-gmp and php7-pecl-mailparse." }
   - { date: "13.02.21:", desc: "Remove php7-pecl-imagick (it now installs the full imagemagick with too much crud). Users can install it via [this docker mod](https://github.com/linuxserver/docker-mods/tree/swag-imagemagick)." }
