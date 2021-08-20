@@ -44,7 +44,7 @@ libmcrypt-2.5.8-r9
 libmd-1.0.3-r0
 libmemcached-libs-1.0.18-r4
 libpng-1.6.37-r1
-libpq-13.3-r0
+libpq-13.4-r0
 libproc-3.3.17-r0
 libressl3.3-libcrypto-3.3.3-r0
 libressl3.3-libssl-3.3.3-r0
