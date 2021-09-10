@@ -31,8 +31,8 @@ libcurl-7.78.0-r0
 libedit-20210216.3.1-r0
 libevent-2.1.12-r2
 libgcc-10.3.1_git20210424-r2
-libgcrypt-1.9.3-r0
-libgd-2.3.2-r0
+libgcrypt-1.9.4-r0
+libgd-2.3.2-r1
 libgpg-error-1.42-r0
 libice-1.0.10-r0
 libintl-0.21-r0
