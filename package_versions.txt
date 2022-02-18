@@ -44,7 +44,7 @@ libmcrypt-2.5.8-r9
 libmd-1.0.3-r0
 libmemcached-libs-1.0.18-r4
 libpng-1.6.37-r1
-libpq-13.5-r0
+libpq-13.6-r0
 libproc-3.3.17-r0
 libressl3.3-libcrypto-3.3.3-r0
 libressl3.3-libssl-3.3.3-r0
@@ -55,7 +55,7 @@ libsm-1.2.3-r0
 libsodium-1.0.18-r0
 libssl1.1-1.1.1l-r0
 libstdc++-10.3.1_git20210424-r2
-libuuid-2.37.3-r0
+libuuid-2.37.4-r0
 libwebp-1.2.0-r2
 libx11-1.7.2-r0
 libxau-1.0.9-r0
