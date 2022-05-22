@@ -226,6 +226,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **22.05.22:** - Install nginx version from 3.14.
 * **01.07.21:** - Rebasing to alpine 3.14.
 * **24.06.21:** - Update default nginx conf folder.
 * **12.04.21:** - Add php7-gmp and php7-pecl-mailparse.
