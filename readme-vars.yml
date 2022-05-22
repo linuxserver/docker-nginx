@@ -40,6 +40,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "22.05.22:", desc: "Install nginx version from 3.14." }
   - { date: "01.07.21:", desc: "Rebasing to alpine 3.14." }
   - { date: "24.06.21:", desc: "Update default nginx conf folder." }
   - { date: "12.04.21:", desc: "Add php7-gmp and php7-pecl-mailparse." }
