@@ -35,6 +35,7 @@ RUN \
     nginx-mod-http-set-misc==${NGINX_VERSION} \
     nginx-mod-http-upload-progress==${NGINX_VERSION} \
     nginx-mod-http-xslt-filter==${NGINX_VERSION} \
+    nginx-mod-http-vts==${NGINX_VERSION} \
     nginx-mod-mail==${NGINX_VERSION} \
     nginx-mod-rtmp==${NGINX_VERSION} \
     nginx-mod-stream==${NGINX_VERSION} \

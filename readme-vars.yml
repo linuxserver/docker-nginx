@@ -40,6 +40,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "30.05.22:", desc: "Added support for VTS pluggin." }
   - { date: "22.05.22:", desc: "Install nginx version from 3.14." }
   - { date: "01.07.21:", desc: "Rebasing to alpine 3.14." }
   - { date: "24.06.21:", desc: "Update default nginx conf folder." }
