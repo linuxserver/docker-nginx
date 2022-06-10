@@ -44,7 +44,7 @@ libmcrypt-2.5.8-r9
 libmd-1.0.3-r0
 libmemcached-libs-1.0.18-r4
 libpng-1.6.37-r1
-libpq-13.6-r0
+libpq-13.7-r0
 libproc-3.3.17-r0
 libressl3.3-libcrypto-3.3.6-r0
 libressl3.3-libssl-3.3.6-r0
@@ -68,7 +68,7 @@ libxslt-1.1.35-r0
 libxt-1.2.1-r0
 libzip-1.7.3-r2
 linux-pam-1.5.1-r1
-logrotate-3.18.1-r1
+logrotate-3.18.1-r2
 lz4-libs-1.9.3-r1
 memcached-1.6.9-r0
 musl-1.2.2-r3
