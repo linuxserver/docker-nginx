@@ -83,5 +83,9 @@ RUN \
     --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     php8-pecl-xmlrpc
 
-# add local files
+# copy local files
 COPY root/ /
+
+# ports and volumes
+EXPOSE 80 443
+VOLUME /config
