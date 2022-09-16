@@ -65,7 +65,7 @@ libxslt-1.1.35-r0
 libxt-1.2.1-r0
 libzip-1.8.0-r1
 linux-pam-1.5.2-r0
-logrotate-3.18.1-r3
+logrotate-3.18.1-r4
 lz4-libs-1.9.3-r1
 memcached-1.6.12-r0
 musl-1.2.2-r7
