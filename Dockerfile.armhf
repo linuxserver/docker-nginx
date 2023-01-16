@@ -27,7 +27,6 @@ RUN \
     nginx-mod-http-geoip2==${NGINX_VERSION} \
     nginx-mod-http-headers-more==${NGINX_VERSION} \
     nginx-mod-http-image-filter==${NGINX_VERSION} \
-    nginx-mod-http-nchan==${NGINX_VERSION} \
     nginx-mod-http-perl==${NGINX_VERSION} \
     nginx-mod-http-redis2==${NGINX_VERSION} \
     nginx-mod-http-set-misc==${NGINX_VERSION} \
