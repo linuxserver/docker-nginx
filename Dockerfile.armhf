@@ -71,7 +71,6 @@ RUN \
     php81-sodium \
     php81-sqlite3 \
     php81-tokenizer \
-    php81-xml \
     php81-xmlreader \
     php81-xsl \
     php81-zip && \
