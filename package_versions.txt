@@ -16,7 +16,7 @@ c-client-2007f-r14
 ca-certificates-20220614-r4
 ca-certificates-bundle-20220614-r4
 coreutils-9.1-r0
-curl-7.87.0-r1
+curl-7.87.0-r2
 fontconfig-2.14.1-r0
 freetype-2.12.1-r0
 gdbm-1.23-r0
