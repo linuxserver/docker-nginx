@@ -4,7 +4,7 @@ alpine-baselayout-data          3.4.0-r0               apk
 alpine-keys                     2.4-r1                 apk     
 alpine-release                  3.17.2-r0              apk     
 aom-libs                        3.5.0-r0               apk     
-apache2-utils                   2.4.55-r0              apk     
+apache2-utils                   2.4.56-r0              apk     
 apk-tools                       2.12.10-r1             apk     
 apr                             1.7.2-r0               apk     
 apr-util                        1.6.3-r0               apk     
@@ -23,8 +23,8 @@ fontconfig                      2.14.1-r0              apk
 freetype                        2.12.1-r0              apk     
 gdbm                            1.23-r0                apk     
 geoip                           1.6.12-r3              apk     
-git                             2.38.4-r0              apk     
-git-perl                        2.38.4-r0              apk     
+git                             2.38.4-r1              apk     
+git-perl                        2.38.4-r1              apk     
 gmp                             6.2.1-r2               apk     
 icu-data-en                     72.1-r1                apk     
 icu-libs                        72.1-r1                apk     
@@ -113,7 +113,7 @@ pcre                            8.45-r2                apk
 pcre2                           10.42-r0               apk     
 perl                            5.36.0-r0              apk     
 perl-error                      0.17029-r1             apk     
-perl-git                        2.38.4-r0              apk     
+perl-git                        2.38.4-r1              apk     
 php-cli                         8.1.16                 binary  
 php-fpm                         8.1.16                 binary  
 php81                           8.1.16-r0              apk     
