@@ -51,6 +51,7 @@ RUN \
     php81-imap \
     php81-intl \
     php81-ldap \
+    php81-mbstring \
     php81-mysqli \
     php81-mysqlnd \
     php81-opcache \
