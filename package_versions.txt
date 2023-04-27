@@ -24,7 +24,6 @@ freetype                        2.12.1-r0              apk
 gdbm                            1.23-r0                apk     
 geoip                           1.6.12-r3              apk     
 git                             2.38.4-r1              apk     
-git-perl                        2.38.4-r1              apk     
 gmp                             6.2.1-r2               apk     
 icu-data-en                     72.1-r1                apk     
 icu-libs                        72.1-r1                apk     
@@ -35,7 +34,7 @@ libavif                         0.11.1-r0              apk
 libbsd                          0.11.7-r0              apk     
 libbz2                          1.0.8-r4               apk     
 libc-utils                      0.7.2-r3               apk     
-libcrypto3                      3.0.8-r3               apk     
+libcrypto3                      3.0.8-r4               apk     
 libcurl                         8.0.1-r0               apk     
 libdav1d                        1.0.0-r2               apk     
 libedit                         20221030.3.1-r0        apk     
@@ -60,7 +59,7 @@ libsasl                         2.1.28-r3              apk
 libseccomp                      2.5.4-r0               apk     
 libsm                           1.2.3-r1               apk     
 libsodium                       1.0.18-r2              apk     
-libssl3                         3.0.8-r3               apk     
+libssl3                         3.0.8-r4               apk     
 libstdc++                       12.2.1_git20220924-r4  apk     
 libuuid                         2.38.1-r1              apk     
 libwebp                         1.2.4-r1               apk     
@@ -108,12 +107,10 @@ nginx-mod-stream-geoip          1.22.1-r0              apk
 nginx-mod-stream-geoip2         1.22.1-r0              apk     
 nginx-vim                       1.22.1-r0              apk     
 oniguruma                       6.9.8-r0               apk     
-openssl                         3.0.8-r3               apk     
+openssl                         3.0.8-r4               apk     
 pcre                            8.45-r2                apk     
 pcre2                           10.42-r0               apk     
 perl                            5.36.0-r1              apk     
-perl-error                      0.17029-r1             apk     
-perl-git                        2.38.4-r1              apk     
 php-cli                         8.1.18                 binary  
 php-fpm                         8.1.18                 binary  
 php81                           8.1.18-r0              apk     
