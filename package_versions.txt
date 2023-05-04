@@ -23,7 +23,8 @@ fontconfig                      2.14.1-r0              apk
 freetype                        2.12.1-r0              apk     
 gdbm                            1.23-r0                apk     
 geoip                           1.6.12-r3              apk     
-git                             2.38.4-r1              apk     
+git                             2.38.5-r0              apk     
+git-perl                        2.38.5-r0              apk     
 gmp                             6.2.1-r2               apk     
 icu-data-en                     72.1-r1                apk     
 icu-libs                        72.1-r1                apk     
@@ -111,6 +112,8 @@ openssl                         3.0.8-r4               apk
 pcre                            8.45-r2                apk     
 pcre2                           10.42-r0               apk     
 perl                            5.36.0-r1              apk     
+perl-error                      0.17029-r1             apk     
+perl-git                        2.38.5-r0              apk     
 php-cli                         8.1.18                 binary  
 php-fpm                         8.1.18                 binary  
 php81                           8.1.18-r0              apk     
@@ -147,7 +150,7 @@ php81-pecl-mailparse            3.1.4-r0               apk
 php81-pecl-mcrypt               1.0.6-r0               apk     
 php81-pecl-memcached            3.2.0-r0               apk     
 php81-pecl-redis                5.3.7-r0               apk     
-php81-pecl-xmlrpc               1.0.0_rc3-r0           apk     
+php81-pecl-xmlrpc               1.0.0_rc3-r1           apk     
 php81-pgsql                     8.1.18-r0              apk     
 php81-phar                      8.1.18-r0              apk     
 php81-posix                     8.1.18-r0              apk     
