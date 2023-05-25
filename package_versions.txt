@@ -36,7 +36,7 @@ libbsd                          0.11.7-r0              apk
 libbz2                          1.0.8-r4               apk     
 libc-utils                      0.7.2-r3               apk     
 libcrypto3                      3.0.8-r4               apk     
-libcurl                         8.1.0-r0               apk     
+libcurl                         8.1.1-r0               apk     
 libdav1d                        1.0.0-r2               apk     
 libedit                         20221030.3.1-r0        apk     
 libevent                        2.1.12-r5              apk     
@@ -63,7 +63,7 @@ libsodium                       1.0.18-r2              apk
 libssl3                         3.0.8-r4               apk     
 libstdc++                       12.2.1_git20220924-r4  apk     
 libuuid                         2.38.1-r1              apk     
-libwebp                         1.2.4-r1               apk     
+libwebp                         1.2.4-r2               apk     
 libx11                          1.8.4-r0               apk     
 libxau                          1.0.10-r0              apk     
 libxcb                          1.15-r0                apk     
@@ -79,7 +79,7 @@ logrotate                       3.20.1-r3              apk
 lz4-libs                        1.9.4-r1               apk     
 memcached                       1.6.17                 binary  
 memcached                       1.6.17-r0              apk     
-musl                            1.2.3-r4               apk     
+musl                            1.2.3-r5               apk     
 musl-utils                      1.2.3-r4               apk     
 nano                            7.0-r0                 apk     
 ncurses-libs                    6.3_p20221119-r0       apk     
@@ -111,7 +111,7 @@ oniguruma                       6.9.8-r0               apk
 openssl                         3.0.8-r4               apk     
 pcre                            8.45-r2                apk     
 pcre2                           10.42-r0               apk     
-perl                            5.36.0-r1              apk     
+perl                            5.36.0-r2              apk     
 perl-error                      0.17029-r1             apk     
 perl-git                        2.38.5-r0              apk     
 php-cli                         8.1.19                 binary  
