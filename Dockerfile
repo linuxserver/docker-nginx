@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.17
+FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.18
 
 # set version label
 ARG BUILD_DATE
@@ -13,10 +13,10 @@ LABEL maintainer="aptalca"
 # install packages
 RUN \
   if [ -z ${NGINX_VERSION+x} ]; then \
-    NGINX_VERSION=$(curl -sL "http://dl-cdn.alpinelinux.org/alpine/v3.17/main/x86_64/APKINDEX.tar.gz" | tar -xz -C /tmp \
+    NGINX_VERSION=$(curl -sL "http://dl-cdn.alpinelinux.org/alpine/v3.18/main/x86_64/APKINDEX.tar.gz" | tar -xz -C /tmp \
     && awk '/^P:nginx$/,/V:/' /tmp/APKINDEX | sed -n 2p | sed 's/^V://'); \
   fi && \
-  apk add --no-cache --upgrade \
+  apk add --no-cache \
     memcached \
     nginx==${NGINX_VERSION} \
     nginx-mod-http-brotli==${NGINX_VERSION} \
@@ -38,46 +38,39 @@ RUN \
     nginx-mod-stream-geoip==${NGINX_VERSION} \
     nginx-mod-stream-geoip2==${NGINX_VERSION} \
     nginx-vim==${NGINX_VERSION} \
-    php81-bcmath \
-    php81-bz2 \
-    php81-ctype \
-    php81-curl \
-    php81-dom \
-    php81-exif \
-    php81-ftp \
-    php81-gd \
-    php81-gmp \
-    php81-iconv \
-    php81-imap \
-    php81-intl \
-    php81-ldap \
-    php81-mysqli \
-    php81-mysqlnd \
-    php81-opcache \
-    php81-pdo_mysql \
-    php81-pdo_odbc \
-    php81-pdo_pgsql \
-    php81-pdo_sqlite \
-    php81-pear \
-    php81-pecl-apcu \
-    php81-pecl-mailparse \
-    php81-pecl-memcached \
-    php81-pecl-redis \
-    php81-pgsql \
-    php81-phar \
-    php81-posix \
-    php81-soap \
-    php81-sockets \
-    php81-sodium \
-    php81-sqlite3 \
-    php81-tokenizer \
-    php81-xmlreader \
-    php81-xsl \
-    php81-zip && \
-  apk add --no-cache \
-    --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
-    php81-pecl-mcrypt \
-    php81-pecl-xmlrpc
+    php82-bcmath \
+    php82-bz2 \
+    php82-dom \
+    php82-exif \
+    php82-ftp \
+    php82-gd \
+    php82-gmp \
+    php82-imap \
+    php82-intl \
+    php82-ldap \
+    php82-mysqli \
+    php82-mysqlnd \
+    php82-opcache \
+    php82-pdo_mysql \
+    php82-pdo_odbc \
+    php82-pdo_pgsql \
+    php82-pdo_sqlite \
+    php82-pear \
+    php82-pecl-apcu \
+    php82-pecl-mailparse \
+    php82-pecl-memcached \
+    php82-pecl-redis \
+    php82-pgsql \
+    php82-posix \
+    php82-soap \
+    php82-sockets \
+    php82-sodium \
+    php82-sqlite3 \
+    php82-tokenizer \
+    php82-xmlreader \
+    php82-xsl && \
+  apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+    php82-pecl-mcrypt
 
 # ports and volumes
 EXPOSE 80 443
