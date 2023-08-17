@@ -2,7 +2,7 @@ NAME                            VERSION                 TYPE
 alpine-baselayout               3.4.3-r1                apk     
 alpine-baselayout-data          3.4.3-r1                apk     
 alpine-keys                     2.4-r1                  apk     
-alpine-release                  3.18.2-r0               apk     
+alpine-release                  3.18.3-r0               apk     
 aom-libs                        3.6.1-r0                apk     
 apache2-utils                   2.4.57-r3               apk     
 apk-tools                       2.14.0-r2               apk     
@@ -35,7 +35,7 @@ libavif                         0.11.1-r2               apk
 libbsd                          0.11.7-r1               apk     
 libbz2                          1.0.8-r5                apk     
 libc-utils                      0.7.2-r5                apk     
-libcrypto3                      3.1.1-r3                apk     
+libcrypto3                      3.1.2-r0                apk     
 libcurl                         8.2.1-r0                apk     
 libdav1d                        1.2.1-r0                apk     
 libedit                         20221030.3.1-r1         apk     
@@ -56,13 +56,13 @@ libmd                           1.0.4-r2                apk
 libmemcached-libs               1.1.4-r1                apk     
 libncursesw                     6.4_p20230506-r0        apk     
 libpng                          1.6.39-r3               apk     
-libpq                           15.3-r0                 apk     
+libpq                           15.4-r0                 apk     
 libproc2                        4.0.3-r1                apk     
 libsasl                         2.1.28-r4               apk     
 libseccomp                      2.5.4-r2                apk     
 libsm                           1.2.4-r1                apk     
 libsodium                       1.0.18-r3               apk     
-libssl3                         3.1.1-r3                apk     
+libssl3                         3.1.2-r0                apk     
 libstdc++                       12.2.1_git20220924-r10  apk     
 libunistring                    1.1-r1                  apk     
 libuuid                         2.38.1-r8               apk     
@@ -80,7 +80,6 @@ libzip                          1.9.2-r2                apk
 linux-pam                       1.5.2-r10               apk     
 logrotate                       3.21.0-r1               apk     
 lz4-libs                        1.9.4-r4                apk     
-memcached                       1.6.21                  binary  
 memcached                       1.6.21-r0               apk     
 musl                            1.2.4-r1                apk     
 musl-utils                      1.2.4-r1                apk     
@@ -110,14 +109,13 @@ nginx-mod-stream-geoip          1.24.0-r6               apk
 nginx-mod-stream-geoip2         1.24.0-r6               apk     
 nginx-vim                       1.24.0-r6               apk     
 oniguruma                       6.9.8-r1                apk     
-openssl                         3.1.1-r3                apk     
+openssl                         3.1.2-r0                apk     
 pcre                            8.45-r3                 apk     
 pcre2                           10.42-r1                apk     
 perl                            5.36.1-r2               apk     
 perl-error                      0.17029-r1              apk     
 perl-git                        2.40.1-r0               apk     
 php-cli                         8.2.8                   binary  
-php-fpm                         8.2.8                   binary  
 php82                           8.2.8-r0                apk     
 php82-bcmath                    8.2.8-r0                apk     
 php82-bz2                       8.2.8-r0                apk     
