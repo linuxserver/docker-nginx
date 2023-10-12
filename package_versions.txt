@@ -2,7 +2,7 @@ NAME                            VERSION                 TYPE
 alpine-baselayout               3.4.3-r1                apk   
 alpine-baselayout-data          3.4.3-r1                apk   
 alpine-keys                     2.4-r1                  apk   
-alpine-release                  3.18.3-r0               apk   
+alpine-release                  3.18.4-r0               apk   
 aom-libs                        3.6.1-r0                apk   
 apache2-utils                   2.4.57-r3               apk   
 apk-tools                       2.14.0-r2               apk   
@@ -147,7 +147,7 @@ php82-pecl-igbinary             3.2.14-r0               apk
 php82-pecl-mcrypt               1.0.6-r0                apk   
 php82-pecl-memcached            3.2.0-r1                apk   
 php82-pecl-msgpack              2.2.0-r0                apk   
-php82-pecl-redis                6.0.0-r0                apk   
+php82-pecl-redis                6.0.1-r0                apk   
 php82-pgsql                     8.2.10-r0               apk   
 php82-phar                      8.2.10-r0               apk   
 php82-posix                     8.2.10-r0               apk   
