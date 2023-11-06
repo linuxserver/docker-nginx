@@ -71,6 +71,9 @@ RUN \
   apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     php82-pecl-mcrypt
 
+# copy local files
+COPY root/ /
+
 # ports and volumes
 EXPOSE 80 443
 
