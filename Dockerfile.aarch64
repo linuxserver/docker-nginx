@@ -68,7 +68,7 @@ RUN \
     php82-tokenizer \
     php82-xmlreader \
     php82-xsl && \
-  apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+  apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community \
     php82-pecl-mcrypt
 
 # ports and volumes
