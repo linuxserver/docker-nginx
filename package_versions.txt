@@ -55,7 +55,7 @@ libmd                           1.0.4-r2                apk
 libmemcached-libs               1.1.4-r1                apk   
 libncursesw                     6.4_p20230506-r0        apk   
 libpng                          1.6.39-r3               apk   
-libpq                           15.4-r0                 apk   
+libpq                           15.5-r0                 apk   
 libproc2                        4.0.4-r0                apk   
 libsasl                         2.1.28-r4               apk   
 libseccomp                      2.5.4-r2                apk   
