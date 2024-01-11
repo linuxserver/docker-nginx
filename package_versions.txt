@@ -173,7 +173,7 @@ skalibs                         2.13.1.1-r1             apk
 sqlite-libs                     3.41.2-r2               apk     
 ssl_client                      1.36.1-r5               apk     
 tiff                            4.5.1-r0                apk     
-tzdata                          2023c-r1                apk     
+tzdata                          2023d-r0                apk     
 unixodbc                        2.3.11-r2               apk     
 utmps-libs                      0.1.2.1-r1              apk     
 xz-libs                         5.4.3-r0                apk     
