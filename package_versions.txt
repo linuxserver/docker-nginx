@@ -16,7 +16,7 @@ busybox-binsh                   1.36.1-r5               apk
 c-client                        2007f-r15               apk     
 ca-certificates                 20230506-r0             apk     
 ca-certificates-bundle          20230506-r0             apk     
-composer                        2.6.6                   binary  
+composer                        2.7.0                   binary  
 coreutils                       9.3-r2                  apk     
 curl                            8.5.0-r0                apk     
 fontconfig                      2.14.2-r3               apk     
@@ -56,7 +56,7 @@ libmd                           1.0.4-r2                apk
 libmemcached-libs               1.1.4-r1                apk     
 libncursesw                     6.4_p20230506-r0        apk     
 libpng                          1.6.39-r3               apk     
-libpq                           15.5-r0                 apk     
+libpq                           15.6-r0                 apk     
 libproc2                        4.0.4-r0                apk     
 libsasl                         2.1.28-r4               apk     
 libseccomp                      2.5.4-r2                apk     
@@ -173,7 +173,7 @@ skalibs                         2.13.1.1-r1             apk
 sqlite-libs                     3.41.2-r3               apk     
 ssl_client                      1.36.1-r5               apk     
 tiff                            4.5.1-r0                apk     
-tzdata                          2023d-r0                apk     
+tzdata                          2024a-r0                apk     
 unixodbc                        2.3.11-r2               apk     
 utmps-libs                      0.1.2.1-r1              apk     
 xz-libs                         5.4.3-r0                apk     
