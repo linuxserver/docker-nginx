@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+for file in /config/log/nginx/access.log /config/log/nginx/error.log; do
+    if [[ ! -f "${file}" ]]; then
+        touch "${file}"
+    fi
+done
+
+# permissions
+lsiown -R abc:abc \
+    /config
