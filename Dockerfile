@@ -7,7 +7,7 @@ ARG BUILD_DATE
 ARG VERSION
 ARG NGINX_VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="aptalca"
+LABEL maintainer="nemchik"
 
 
 # install packages
@@ -68,8 +68,9 @@ RUN \
     php83-tokenizer \
     php83-xmlreader \
     php83-xsl && \
-  apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
-    php83-pecl-mcrypt
+  apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community \
+    php83-pecl-mcrypt && \
+  rm -f /etc/nginx/conf.d/stream.conf
 
 # ports and volumes
 EXPOSE 80 443
