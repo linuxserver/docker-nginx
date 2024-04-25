@@ -5,7 +5,7 @@ alpine-keys                     2.4-r1                 apk
 alpine-release                  3.19.1-r0              apk       
 aom-libs                        3.7.1-r0               apk       
 apache2-utils                   2.4.59-r0              apk       
-apk-tools                       2.14.3-r1              apk       
+apk-tools                       2.14.4-r0              apk       
 apr                             1.7.4-r0               apk       
 apr-util                        1.6.3-r1               apk       
 argon2-libs                     20190702-r5            apk       
@@ -23,6 +23,7 @@ coreutils-env                   9.4-r2                 apk
 coreutils-fmt                   9.4-r2                 apk       
 coreutils-sha512sum             9.4-r2                 apk       
 curl                            8.5.0-r0               apk       
+findutils                       4.9.0-r5               apk       
 fontconfig                      2.14.2-r4              apk       
 freetype                        2.13.2-r0              apk       
 gdbm                            1.23-r1                apk       
@@ -61,7 +62,7 @@ libmd                           1.1.0-r0               apk
 libmemcached-libs               1.1.4-r1               apk       
 libncursesw                     6.4_p20231125-r0       apk       
 libpng                          1.6.40-r0              apk       
-libpq                           16.2-r0                apk       
+libpq                           16.2-r1                apk       
 libproc2                        4.0.4-r0               apk       
 libsasl                         2.1.28-r5              apk       
 libseccomp                      2.5.5-r0               apk       
