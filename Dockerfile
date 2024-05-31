@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.19
+FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.20
 
 # set version label
 ARG BUILD_DATE
@@ -13,7 +13,7 @@ LABEL maintainer="nemchik"
 # install packages
 RUN \
   if [ -z ${NGINX_VERSION+x} ]; then \
-    NGINX_VERSION=$(curl -sL "http://dl-cdn.alpinelinux.org/alpine/v3.19/main/x86_64/APKINDEX.tar.gz" | tar -xz -C /tmp \
+    NGINX_VERSION=$(curl -sL "http://dl-cdn.alpinelinux.org/alpine/v3.20/main/x86_64/APKINDEX.tar.gz" | tar -xz -C /tmp \
     && awk '/^P:nginx$/,/V:/' /tmp/APKINDEX | sed -n 2p | sed 's/^V://'); \
   fi && \
   apk add --no-cache \
@@ -57,6 +57,7 @@ RUN \
     php83-pdo_sqlite \
     php83-pear \
     php83-pecl-apcu \
+    php83-pecl-mcrypt \
     php83-pecl-memcached \
     php83-pecl-redis \
     php83-pgsql \
@@ -68,8 +69,7 @@ RUN \
     php83-tokenizer \
     php83-xmlreader \
     php83-xsl && \
-  apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community \
-    php83-pecl-mcrypt && \
+  printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   rm -f /etc/nginx/conf.d/stream.conf
 
 # ports and volumes
