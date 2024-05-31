@@ -22,23 +22,16 @@ param_usage_include_ports: true
 param_ports:
   - { external_port: "80", internal_port: "80", port_desc: "http" }
   - { external_port: "443", internal_port: "443", port_desc: "https" }
-param_usage_include_env: true
-param_env_vars:
-  - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London"}
-
-# optional parameters
-optional_block_1: false
-optional_block_1_items: ""
 
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
-  Add your web files to `/config/www` for hosting.  
-  Modify the nginx, php and site config files under `/config` as needed  
-  *Protip: This container is best combined with a sql server, e.g. [mariadb](https://hub.docker.com/r/linuxserver/mariadb/)*
+  Add your web files to `/config/www` for hosting.
+  Modify the nginx, php and site config files under `/config` as needed
 
 # changelog
 changelogs:
+  - { date: "31.05.24:", desc: "Rebase to Alpine 3.20. Existing users should update their nginx confs to avoid http2 deprecation warnings."}
   - { date: "05.03.24:", desc: "Rebase to Alpine 3.19 with php 8.3."}
   - { date: "25.05.23:", desc: "Rebase to Alpine 3.18, deprecate armhf." }
   - { date: "16.01.23:", desc: "Remove nchan module because it keeps causing crashes." }
