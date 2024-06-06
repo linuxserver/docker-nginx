@@ -31,7 +31,6 @@ gdbm                            1.23-r1                apk
 geoip                           1.6.12-r5              apk       
 git                             2.45.1-r0              apk       
 git-init-template               2.45.1-r0              apk       
-git-perl                        2.45.1-r0              apk       
 gmp                             6.3.0-r1               apk       
 icu-data-en                     74.2-r0                apk       
 icu-libs                        74.2-r0                apk       
@@ -121,8 +120,6 @@ openssl                         3.3.0-r2               apk
 pcre                            8.45-r3                apk       
 pcre2                           10.43-r0               apk       
 perl                            5.38.2-r0              apk       
-perl-error                      0.17029-r2             apk       
-perl-git                        2.45.1-r0              apk       
 php83                           8.3.7-r0               apk       
 php83-bcmath                    8.3.7-r0               apk       
 php83-bz2                       8.3.7-r0               apk       
@@ -155,7 +152,7 @@ php83-pecl-apcu                 5.1.23-r0              apk
 php83-pecl-igbinary             3.2.15-r0              apk       
 php83-pecl-mcrypt               1.0.7-r0               apk       
 php83-pecl-memcached            3.2.0-r0               apk       
-php83-pecl-msgpack              2.2.0-r1               apk       
+php83-pecl-msgpack              2.2.0-r2               apk       
 php83-pecl-redis                6.0.2-r0               apk       
 php83-pgsql                     8.3.7-r0               apk       
 php83-phar                      8.3.7-r0               apk       
