@@ -18,7 +18,7 @@ c-client                        2007f-r15              apk
 ca-certificates                 20240705-r0            apk       
 ca-certificates-bundle          20240705-r0            apk       
 catatonit                       0.2.0-r0               apk       
-composer                        2.7.7                  binary    
+composer                        2.7.8                  binary    
 coreutils                       9.5-r1                 apk       
 coreutils-env                   9.5-r1                 apk       
 coreutils-fmt                   9.5-r1                 apk       
