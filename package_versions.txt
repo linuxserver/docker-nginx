@@ -55,7 +55,7 @@ libice                          1.1.1-r6               apk
 libidn2                         2.3.7-r0               apk       
 libintl                         0.22.5-r0              apk       
 libjpeg-turbo                   3.0.3-r0               apk       
-libldap                         2.6.7-r0               apk       
+libldap                         2.6.8-r0               apk       
 libmaxminddb-libs               1.9.1-r0               apk       
 libmcrypt                       2.5.8-r10              apk       
 libmd                           1.1.0-r0               apk       
