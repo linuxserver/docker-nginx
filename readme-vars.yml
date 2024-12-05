@@ -6,78 +6,127 @@ project_url: "https://nginx.org/"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nginx-banner.png"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a simple webserver with php support. The config files reside in `/config` for easy user customization."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
-
 # supported architectures
 available_architectures:
-  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
-  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
-
+  - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - {arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
 # container parameters
 common_param_env_vars_enabled: true
 param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Persistent config files" }
+  - {vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Persistent config files"}
 param_usage_include_ports: true
 param_ports:
-  - { external_port: "80", internal_port: "80", port_desc: "http" }
-  - { external_port: "443", internal_port: "443", port_desc: "https" }
-
+  - {external_port: "80", internal_port: "80", port_desc: "http"}
+  - {external_port: "443", internal_port: "443", port_desc: "https"}
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
   Add your web files to `/config/www` for hosting.
   Modify the nginx, php and site config files under `/config` as needed
-
+# init diagram
+init_diagram: |
+  "nginx:latest": {
+    docker-mods
+    base {
+      fix-attr +\nlegacy cont-init
+    }
+    docker-mods -> base
+    legacy-services
+    custom services
+    init-services -> legacy-services
+    init-services -> custom services
+    custom services -> legacy-services
+    legacy-services -> ci-service-check
+    init-migrations -> init-adduser
+    init-nginx-end -> init-config
+    init-os-end -> init-config
+    init-config -> init-config-end
+    init-os-end -> init-crontab-config
+    init-mods-end -> init-custom-files
+    base -> init-envfile
+    init-os-end -> init-folders
+    init-php -> init-keygen
+    base -> init-migrations
+    base -> init-mods
+    init-config-end -> init-mods
+    init-version-checks -> init-mods
+    init-mods -> init-mods-end
+    init-mods-package-install -> init-mods-end
+    init-mods -> init-mods-package-install
+    init-samples -> init-nginx
+    init-permissions -> init-nginx-end
+    base -> init-os-end
+    init-adduser -> init-os-end
+    init-envfile -> init-os-end
+    init-migrations -> init-os-end
+    init-keygen -> init-permissions
+    init-nginx -> init-php
+    init-folders -> init-samples
+    init-custom-files -> init-services
+    init-mods-end -> init-services
+    init-config-end -> init-version-checks
+    init-services -> svc-cron
+    svc-cron -> legacy-services
+    init-services -> svc-nginx
+    svc-nginx -> legacy-services
+    init-services -> svc-php-fpm
+    svc-php-fpm -> legacy-services
+  }
+  Base Images: {
+    "baseimage-alpine-nginx:3.20" <- "baseimage-alpine:3.20"
+  }
+  "nginx:latest" <- Base Images
 # changelog
 changelogs:
-  - { date: "31.05.24:", desc: "Rebase to Alpine 3.20. Existing users should update their nginx confs to avoid http2 deprecation warnings."}
-  - { date: "05.03.24:", desc: "Rebase to Alpine 3.19 with php 8.3."}
-  - { date: "25.05.23:", desc: "Rebase to Alpine 3.18, deprecate armhf." }
-  - { date: "16.01.23:", desc: "Remove nchan module because it keeps causing crashes." }
-  - { date: "22.12.22:", desc: "Rebase to Alpine 3.17 with PHP 8.1, migrate to s6v3." }
-  - { date: "20.08.22:", desc: "Rebasing to alpine 3.15 with php8. Restructure nginx configs ([see changes announcement](https://info.linuxserver.io/issues/2022-08-20-nginx-base))." }
-  - { date: "22.05.22:", desc: "Install nginx version from 3.14." }
-  - { date: "01.07.21:", desc: "Rebasing to alpine 3.14." }
-  - { date: "24.06.21:", desc: "Update default nginx conf folder." }
-  - { date: "12.04.21:", desc: "Add php7-gmp and php7-pecl-mailparse." }
-  - { date: "13.02.21:", desc: "Remove php7-pecl-imagick (it now installs the full imagemagick with too much crud). Users can install it via [this docker mod](https://github.com/linuxserver/docker-mods/tree/swag-imagemagick)." }
-  - { date: "09.02.21:", desc: "Rebasing to alpine 3.13. Add nginx mods brotli and dav-ext. Remove nginx mods lua and lua-upstream (due to regression over the last couple of years)." }
-  - { date: "08.09.20:", desc: "Add php7-xsl." }
-  - { date: "01.06.20:", desc: "Rebasing to alpine 3.12." }
-  - { date: "18.04.20:", desc: "Fix unwanted shutdown of the container." }
-  - { date: "11.03.20:", desc: "Add php7-sodium." }
-  - { date: "18.02.20:", desc: "Add geoip2, suppress lua warning." }
-  - { date: "19.12.19:", desc: "Rebasing to alpine 3.11." }
-  - { date: "18.12.19:", desc: "Add php7-imap and php7-pecl-apcu." }
-  - { date: "13.11.19:", desc: "Add php7-pdo_odbc." }
-  - { date: "24.10.19:", desc: "Add php7-pecl-imagick." }
-  - { date: "06.08.19:", desc: "Add php7-bcmath, ph7-pear, php7-xmlrpc and php7-ftp." }
-  - { date: "02.08.19:", desc: "Add php7-ldap." }
-  - { date: "28.06.19:", desc: "Rebasing to alpine 3.10." }
-  - { date: "08.05.19:", desc: "Remove default.conf when nginx is upgraded in downstream image." }
-  - { date: "30.04.19:", desc: "Add php-redis." }
-  - { date: "23.03.19:", desc: "Switching to new Base images, shift to arm32v7 tag." }
-  - { date: "02.03.19:", desc: "Add php intl and posix modules." }
-  - { date: "28.02.19:", desc: "Add php7-opcache, remove memcached service due to issues on aarch64 (let us know if you need to enable it)." }
-  - { date: "22.02.19:", desc: "Rebasing to alpine 3.9." }
-  - { date: "18.11.18:", desc: "Attempt to upgrade packages during build." }
-  - { date: "28.09.18:", desc: "Multi-arch image." }
-  - { date: "17.08.18:", desc: "Rebase to alpine 3.8, inherit nginx.conf from nginx baseimage." }
-  - { date: "11.05.18:", desc: "Add php pgsql support." }
-  - { date: "19.04.18:", desc: "Bind memcached to localhost only, add php7-sqlite3." }
-  - { date: "05.01.18:", desc: "Rebase to alpine 3.7." }
-  - { date: "08.11.17:", desc: "Add php7 soap module." }
-  - { date: "31.10.17:", desc: "Add php7 exif and xmlreader modules." }
-  - { date: "30.09.17:", desc: "Copy additional root files into image." }
-  - { date: "24.09.17:", desc: "Add memcached service." }
-  - { date: "31.08.17:", desc: "Add php7-phar." }
-  - { date: "14.07.17:", desc: "Enable modules dynamically in nginx.conf." }
-  - { date: "22.06.17:", desc: "Add various nginx modules and enable all modules in the default nginx.conf." }
-  - { date: "05.06.17:", desc: "Add php7-bz2." }
-  - { date: "25.05.17:", desc: "Rebase to alpine 3.6." }
-  - { date: "18.04.17:", desc: "Add php7-sockets." }
-  - { date: "27.02.17:", desc: "Rebase to alpine 3.5, update to nginx 1.10.2 and php7." }
-  - { date: "14.10.16:", desc: "Add version layer information." }
-  - { date: "10.09.16:", desc: "Add badges to README." }
-  - { date: "05.12.15:", desc: "Intial Release." }
+  - {date: "31.05.24:", desc: "Rebase to Alpine 3.20. Existing users should update their nginx confs to avoid http2 deprecation warnings."}
+  - {date: "05.03.24:", desc: "Rebase to Alpine 3.19 with php 8.3."}
+  - {date: "25.05.23:", desc: "Rebase to Alpine 3.18, deprecate armhf."}
+  - {date: "16.01.23:", desc: "Remove nchan module because it keeps causing crashes."}
+  - {date: "22.12.22:", desc: "Rebase to Alpine 3.17 with PHP 8.1, migrate to s6v3."}
+  - {date: "20.08.22:", desc: "Rebasing to alpine 3.15 with php8. Restructure nginx configs ([see changes announcement](https://info.linuxserver.io/issues/2022-08-20-nginx-base))."}
+  - {date: "22.05.22:", desc: "Install nginx version from 3.14."}
+  - {date: "01.07.21:", desc: "Rebasing to alpine 3.14."}
+  - {date: "24.06.21:", desc: "Update default nginx conf folder."}
+  - {date: "12.04.21:", desc: "Add php7-gmp and php7-pecl-mailparse."}
+  - {date: "13.02.21:", desc: "Remove php7-pecl-imagick (it now installs the full imagemagick with too much crud). Users can install it via [this docker mod](https://github.com/linuxserver/docker-mods/tree/swag-imagemagick)."}
+  - {date: "09.02.21:", desc: "Rebasing to alpine 3.13. Add nginx mods brotli and dav-ext. Remove nginx mods lua and lua-upstream (due to regression over the last couple of years)."}
+  - {date: "08.09.20:", desc: "Add php7-xsl."}
+  - {date: "01.06.20:", desc: "Rebasing to alpine 3.12."}
+  - {date: "18.04.20:", desc: "Fix unwanted shutdown of the container."}
+  - {date: "11.03.20:", desc: "Add php7-sodium."}
+  - {date: "18.02.20:", desc: "Add geoip2, suppress lua warning."}
+  - {date: "19.12.19:", desc: "Rebasing to alpine 3.11."}
+  - {date: "18.12.19:", desc: "Add php7-imap and php7-pecl-apcu."}
+  - {date: "13.11.19:", desc: "Add php7-pdo_odbc."}
+  - {date: "24.10.19:", desc: "Add php7-pecl-imagick."}
+  - {date: "06.08.19:", desc: "Add php7-bcmath, ph7-pear, php7-xmlrpc and php7-ftp."}
+  - {date: "02.08.19:", desc: "Add php7-ldap."}
+  - {date: "28.06.19:", desc: "Rebasing to alpine 3.10."}
+  - {date: "08.05.19:", desc: "Remove default.conf when nginx is upgraded in downstream image."}
+  - {date: "30.04.19:", desc: "Add php-redis."}
+  - {date: "23.03.19:", desc: "Switching to new Base images, shift to arm32v7 tag."}
+  - {date: "02.03.19:", desc: "Add php intl and posix modules."}
+  - {date: "28.02.19:", desc: "Add php7-opcache, remove memcached service due to issues on aarch64 (let us know if you need to enable it)."}
+  - {date: "22.02.19:", desc: "Rebasing to alpine 3.9."}
+  - {date: "18.11.18:", desc: "Attempt to upgrade packages during build."}
+  - {date: "28.09.18:", desc: "Multi-arch image."}
+  - {date: "17.08.18:", desc: "Rebase to alpine 3.8, inherit nginx.conf from nginx baseimage."}
+  - {date: "11.05.18:", desc: "Add php pgsql support."}
+  - {date: "19.04.18:", desc: "Bind memcached to localhost only, add php7-sqlite3."}
+  - {date: "05.01.18:", desc: "Rebase to alpine 3.7."}
+  - {date: "08.11.17:", desc: "Add php7 soap module."}
+  - {date: "31.10.17:", desc: "Add php7 exif and xmlreader modules."}
+  - {date: "30.09.17:", desc: "Copy additional root files into image."}
+  - {date: "24.09.17:", desc: "Add memcached service."}
+  - {date: "31.08.17:", desc: "Add php7-phar."}
+  - {date: "14.07.17:", desc: "Enable modules dynamically in nginx.conf."}
+  - {date: "22.06.17:", desc: "Add various nginx modules and enable all modules in the default nginx.conf."}
+  - {date: "05.06.17:", desc: "Add php7-bz2."}
+  - {date: "25.05.17:", desc: "Rebase to alpine 3.6."}
+  - {date: "18.04.17:", desc: "Add php7-sockets."}
+  - {date: "27.02.17:", desc: "Rebase to alpine 3.5, update to nginx 1.10.2 and php7."}
+  - {date: "14.10.16:", desc: "Add version layer information."}
+  - {date: "10.09.16:", desc: "Add badges to README."}
+  - {date: "05.12.15:", desc: "Intial Release."}
