@@ -20,6 +20,9 @@ param_usage_include_ports: true
 param_ports:
   - {external_port: "80", internal_port: "80", port_desc: "http"}
   - {external_port: "443", internal_port: "443", port_desc: "https"}
+readonly_supported: true
+readonly_message: |
+  * `/tmp` must be mounted to tmpfs
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
@@ -80,6 +83,7 @@ init_diagram: |
   "nginx:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "17.12.24:", desc: "Rebase to Alpine 3.21."}
   - {date: "31.05.24:", desc: "Rebase to Alpine 3.20. Existing users should update their nginx confs to avoid http2 deprecation warnings."}
   - {date: "05.03.24:", desc: "Rebase to Alpine 3.19 with php 8.3."}
   - {date: "25.05.23:", desc: "Rebase to Alpine 3.18, deprecate armhf."}
