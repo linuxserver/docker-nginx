@@ -46,7 +46,7 @@ libcurl                         8.12.1-r0         apk
 libdav1d                        1.5.0-r0          apk       
 libedit                         20240808.3.1-r0   apk       
 libevent                        2.1.12-r7         apk       
-libexpat                        2.6.4-r0          apk       
+libexpat                        2.7.0-r0          apk       
 libgcc                          14.2.0-r4         apk       
 libgcrypt                       1.10.3-r1         apk       
 libgd                           2.3.3-r9          apk       
@@ -61,7 +61,7 @@ libmcrypt                       2.5.8-r10         apk
 libmd                           1.1.0-r0          apk       
 libmemcached-libs               1.1.4-r1          apk       
 libncursesw                     6.5_p20241006-r3  apk       
-libpng                          1.6.44-r0         apk       
+libpng                          1.6.47-r0         apk       
 libpq                           17.4-r0           apk       
 libproc2                        4.0.4-r2          apk       
 libpsl                          0.21.5-r3         apk       
