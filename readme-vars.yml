@@ -76,11 +76,13 @@ init_diagram: |
     svc-cron -> legacy-services
     init-services -> svc-nginx
     svc-nginx -> legacy-services
+    init-services -> svc-nginx-auto-reload
+    svc-nginx-auto-reload -> legacy-services
     init-services -> svc-php-fpm
     svc-php-fpm -> legacy-services
   }
   Base Images: {
-    "baseimage-alpine-nginx:3.21" <- "baseimage-alpine:3.21"
+    "baseimage-alpine-nginx:3.22" <- "baseimage-alpine:3.22"
   }
   "nginx:latest" <- Base Images
 # changelog
