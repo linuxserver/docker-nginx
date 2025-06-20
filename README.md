@@ -89,6 +89,8 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
+      - NGINX_AUTORELOAD= #optional
+      - NGINX_AUTORELOAD_WATCHLIST= #optional
     volumes:
       - /path/to/nginx/config:/config
     ports:
@@ -105,6 +107,8 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Etc/UTC \
+  -e NGINX_AUTORELOAD= `#optional` \
+  -e NGINX_AUTORELOAD_WATCHLIST= `#optional` \
   -p 80:80 \
   -p 443:443 \
   -v /path/to/nginx/config:/config \
@@ -123,6 +127,8 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Etc/UTC` | specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List). |
+| `-e NGINX_AUTORELOAD=` | Set to `true` to enable automatic reloading of confs on change without stopping/restarting nginx. Your filesystem must support inotify. This functionality was previously offered [via mod](https://github.com/linuxserver/docker-mods/tree/swag-auto-reload). |
+| `-e NGINX_AUTORELOAD_WATCHLIST=` | A [pipe](https://en.wikipedia.org/wiki/Vertical_bar)-separated list of additional folders for auto reload to watch in addition to `/config/nginx` |
 | `-v /config` | Persistent config files |
 | `--read-only=true` | Run container with a read-only filesystem. Please [read the docs](https://docs.linuxserver.io/misc/read-only/). |
 
@@ -288,6 +294,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **16.06.25:** - Rebase to Alpine 3.22 with PHP 8.4. Add [Auto Reload](https://github.com/linuxserver/docker-mods/tree/swag-auto-reload) functionality. Drop PHP bindings for mcrypt as it is no longer maintained.
 * **17.12.24:** - Rebase to Alpine 3.21.
 * **31.05.24:** - Rebase to Alpine 3.20. Existing users should update their nginx confs to avoid http2 deprecation warnings.
 * **05.03.24:** - Rebase to Alpine 3.19 with php 8.3.

@@ -27,7 +27,7 @@ pipeline {
     DEV_DOCKERHUB_IMAGE = 'lsiodev/nginx'
     PR_DOCKERHUB_IMAGE = 'lspipepr/nginx'
     DIST_IMAGE = 'alpine'
-    DIST_REPO = 'http://dl-cdn.alpinelinux.org/alpine/v3.21/main/'
+    DIST_REPO = 'http://dl-cdn.alpinelinux.org/alpine/v3.22/main/'
     DIST_REPO_PACKAGES = 'nginx'
     MULTIARCH='true'
     CI='true'
