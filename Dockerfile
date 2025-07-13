@@ -17,6 +17,7 @@ RUN \
     && awk '/^P:nginx$/,/V:/' /tmp/APKINDEX | sed -n 2p | sed 's/^V://'); \
   fi && \
   apk add --no-cache \
+    inotify-tools \
     memcached \
     nginx==${NGINX_VERSION} \
     nginx-mod-http-brotli==${NGINX_VERSION} \
@@ -70,6 +71,9 @@ RUN \
     php84-xsl && \
   printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   rm -f /etc/nginx/conf.d/stream.conf
+
+# copy local files
+COPY root/ /
 
 # ports and volumes
 EXPOSE 80 443
