@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.22
+FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.24
 
 # set version label
 ARG BUILD_DATE
@@ -13,7 +13,7 @@ LABEL maintainer="nemchik"
 # install packages
 RUN \
   if [ -z ${NGINX_VERSION+x} ]; then \
-    NGINX_VERSION=$(curl -sL "http://dl-cdn.alpinelinux.org/alpine/v3.22/main/x86_64/APKINDEX.tar.gz" | tar -xz -C /tmp \
+    NGINX_VERSION=$(curl -sL "http://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/APKINDEX.tar.gz" | tar -xz -C /tmp \
     && awk '/^P:nginx$/,/V:/' /tmp/APKINDEX | sed -n 2p | sed 's/^V://'); \
   fi && \
   apk add --no-cache \
@@ -39,36 +39,35 @@ RUN \
     nginx-mod-stream-geoip==${NGINX_VERSION} \
     nginx-mod-stream-geoip2==${NGINX_VERSION} \
     nginx-vim==${NGINX_VERSION} \
-    php84-bcmath \
-    php84-bz2 \
-    php84-dom \
-    php84-exif \
-    php84-ftp \
-    php84-gd \
-    php84-gmp \
-    php84-imap \
-    php84-intl \
-    php84-ldap \
-    php84-mysqli \
-    php84-mysqlnd \
-    php84-opcache \
-    php84-pdo_mysql \
-    php84-pdo_odbc \
-    php84-pdo_pgsql \
-    php84-pdo_sqlite \
-    php84-pear \
-    php84-pecl-apcu \
-    php84-pecl-memcached \
-    php84-pecl-redis \
-    php84-pgsql \
-    php84-posix \
-    php84-soap \
-    php84-sockets \
-    php84-sodium \
-    php84-sqlite3 \
-    php84-tokenizer \
-    php84-xmlreader \
-    php84-xsl && \
+    php85-bcmath \
+    php85-bz2 \
+    php85-dom \
+    php85-exif \
+    php85-ftp \
+    php85-gd \
+    php85-gmp \
+    php85-imap \
+    php85-intl \
+    php85-ldap \
+    php85-mysqli \
+    php85-mysqlnd \
+    php85-pdo_mysql \
+    php85-pdo_odbc \
+    php85-pdo_pgsql \
+    php85-pdo_sqlite \
+    php85-pear \
+    php85-pecl-apcu \
+    php85-pecl-memcached \
+    php85-pecl-redis \
+    php85-pgsql \
+    php85-posix \
+    php85-soap \
+    php85-sockets \
+    php85-sodium \
+    php85-sqlite3 \
+    php85-tokenizer \
+    php85-xmlreader \
+    php85-xsl && \
   printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   rm -f /etc/nginx/conf.d/stream.conf
 
