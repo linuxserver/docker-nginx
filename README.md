@@ -291,6 +291,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **05.07.26:** - Rebase to Alpine 3.24 with PHP 8.5.
 * **13.07.25:** - Fixed auto-reload functionality.
 * **16.06.25:** - Rebase to Alpine 3.22 with PHP 8.4. Add [Auto Reload](https://github.com/linuxserver/docker-mods/tree/swag-auto-reload) functionality. Drop PHP bindings for mcrypt as it is no longer maintained.
 * **17.12.24:** - Rebase to Alpine 3.21.

@@ -4,7 +4,7 @@
 project_name: nginx
 project_url: "https://nginx.org/"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nginx-banner.png"
-project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a simple webserver with php support. The config files reside in `/config` for easy user customization."
+project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is an HTTP web server, reverse proxy, content cache, load balancer, TCP/UDP proxy server, and mail proxy server."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 project_categories: "Reverse Proxy"
 # supported architectures
@@ -87,6 +87,7 @@ init_diagram: |
   "nginx:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "05.07.26:", desc: "Rebase to Alpine 3.24 with PHP 8.5."}
   - {date: "13.07.25:", desc: "Fixed auto-reload functionality."}
   - {date: "16.06.25:", desc: "Rebase to Alpine 3.22 with PHP 8.4. Add [Auto Reload](https://github.com/linuxserver/docker-mods/tree/swag-auto-reload) functionality. Drop PHP bindings for mcrypt as it is no longer maintained."}
   - {date: "17.12.24:", desc: "Rebase to Alpine 3.21."}
