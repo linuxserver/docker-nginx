@@ -49,7 +49,7 @@ libcurl                         8.21.0-r0         apk
 libdav1d                        1.5.3-r0          apk       
 libedit                         20260508.3.1-r1   apk       
 libevent                        2.1.13-r0         apk       
-libexpat                        2.8.3-r0          apk       
+libexpat                        2.8.4-r0          apk       
 libgcc                          15.2.0-r5         apk       
 libgd                           2.3.3-r10         apk       
 libice                          1.1.2-r0          apk       
@@ -119,7 +119,7 @@ nginx-mod-stream-geoip2         1.30.4-r1         apk
 nginx-vim                       1.30.4-r1         apk       
 oniguruma                       6.9.10-r0         apk       
 openssl                         3.5.8-r0          apk       
-pcre2                           10.47-r1          apk       
+pcre2                           10.48-r0          apk       
 perl                            5.42.2-r0         apk       
 perl-error                      0.17030-r0        apk       
 perl-git                        2.54.0-r0         apk       
